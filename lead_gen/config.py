@@ -23,6 +23,7 @@ load_dotenv(PROJECT_ROOT / ".env")
 
 COMPANIES_HOUSE_API_KEY = os.getenv("COMPANIES_HOUSE_API_KEY", "")
 SERPER_API_KEY = os.getenv("SERPER_API_KEY", "")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 
 
 def require_key(name: str, value: str) -> str:
@@ -152,3 +153,61 @@ REQUEST_TIMEOUT_SECONDS = 15
 PER_DOMAIN_DELAY_SECONDS = 3.0
 MAX_RESPONSE_BYTES = 2 * 1024 * 1024
 MAX_PAGE_TEXT_CHARS = 20_000
+
+# --- Stage 4: LLM enrichment -------------------------------------------------
+
+# Claude Haiku 5.5: the cheapest current Claude model, chosen for cost.
+# Prices are USD per million tokens (prompts under 100K tokens), as of
+# October 2026. Thinking tokens are billed as output tokens.
+LLM_MODEL = "claude-haiku-5-5"
+LLM_INPUT_PRICE_PER_MTOK = 0.10
+LLM_OUTPUT_PRICE_PER_MTOK = 0.50
+
+# "low" effort keeps the model's reasoning, and so the cost, short. This is
+# a simple reading task.
+LLM_EFFORT = "low"
+LLM_MAX_TOKENS = 4000
+
+# Bump this whenever the prompt or schema changes, so cached answers from
+# the old prompt are not reused and results can be compared by version.
+ENRICH_PROMPT_VERSION = "enrich-v2"
+
+# How much of each scraped page to send. The homepage and about page
+# together average about 8,500 characters, so this rarely cuts anything.
+LLM_PAGE_CHARS = 6_000
+
+# --- Stage 4b: fit scoring and outreach openers ------------------------------
+
+SCORE_PROMPT_VERSION = "score-v2"
+
+# Example customer descriptions ("who is selling, and to whom") that every
+# lead is scored against. The deployed dashboard shows these pre-computed
+# scores, so it never makes live LLM calls.
+CUSTOMER_DESCRIPTIONS = {
+    "it_support": (
+        "We provide managed IT support, cybersecurity and Microsoft 365 setup for small businesses "
+        "in the North East with roughly 5 to 50 staff. Best fit: B2B firms with an office, several "
+        "staff on computers and no in-house IT person, such as engineering firms, accountants, "
+        "recruiters and distributors."
+    ),
+    "van_leasing": (
+        "We lease and maintain vans and light commercial vehicles for trades and service businesses. "
+        "Best fit: companies whose staff travel to customer sites, such as electricians, plumbers, "
+        "builders, landscapers and maintenance contractors, especially ones that are growing or hiring."
+    ),
+    "card_payments": (
+        "We supply card payment terminals and till systems to independent customer-facing businesses. "
+        "Best fit: B2C businesses with physical premises that take payments in person, such as shops, "
+        "cafes, pubs, salons, vets and opticians."
+    ),
+    "packaging": (
+        "We sell packaging, pallet wrap and warehouse consumables to businesses that ship physical goods. "
+        "Best fit: manufacturers, wholesalers, distributors and online retailers with their own "
+        "warehouse or production site."
+    ),
+    "safety_training": (
+        "We deliver accredited health and safety, first aid and manual handling training to employers. "
+        "Best fit: firms with site-based or physical work and a team of employees, such as construction, "
+        "engineering, industrial maintenance, care and hospitality."
+    ),
+}

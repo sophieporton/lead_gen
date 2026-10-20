@@ -55,6 +55,57 @@ CREATE TABLE IF NOT EXISTS pages (
     error          VARCHAR,
     PRIMARY KEY (company_number, page_type)
 );
+
+-- Every LLM response, keyed by a hash of the exact request, so re-running a
+-- stage with an unchanged prompt costs nothing.
+CREATE TABLE IF NOT EXISTS llm_cache (
+    request_hash  VARCHAR PRIMARY KEY,
+    response_json VARCHAR NOT NULL,
+    created_at    TIMESTAMP
+);
+
+-- One row per paid LLM call, for cost tracking.
+CREATE TABLE IF NOT EXISTS llm_calls (
+    company_number VARCHAR,
+    stage          VARCHAR NOT NULL,   -- e.g. enrich
+    model          VARCHAR NOT NULL,
+    prompt_version VARCHAR NOT NULL,
+    input_tokens   INTEGER,
+    output_tokens  INTEGER,
+    cost_usd       DOUBLE,
+    stop_reason    VARCHAR,
+    error          VARCHAR,
+    created_at     TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS enrichments (
+    company_number          VARCHAR PRIMARY KEY,
+    website_matches_company VARCHAR,   -- yes / no / unsure
+    website_match_reason    VARCHAR,
+    what_they_sell          VARCHAR,
+    products_services       VARCHAR[],
+    who_they_sell_to        VARCHAR,
+    market                  VARCHAR,   -- B2B / B2C / both / unclear
+    sector                  VARCHAR,
+    size_signals            VARCHAR[],
+    growth_signals          VARCHAR[],
+    confidence              VARCHAR,   -- high / medium / low
+    model                   VARCHAR,
+    prompt_version          VARCHAR,
+    enriched_at             TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS fit_scores (
+    company_number  VARCHAR NOT NULL,
+    description_key VARCHAR NOT NULL,  -- key in config.CUSTOMER_DESCRIPTIONS
+    fit_score       INTEGER,           -- 0 to 100
+    fit_reason      VARCHAR,
+    outreach_opener VARCHAR,
+    model           VARCHAR,
+    prompt_version  VARCHAR,
+    scored_at       TIMESTAMP,
+    PRIMARY KEY (company_number, description_key)
+);
 """
 
 

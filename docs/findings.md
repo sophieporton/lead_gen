@@ -95,3 +95,64 @@ Scraped the 69 companies with a confirmed, likely or ambiguous website (20 Octob
 - One homepage (groundsix.com) has only 183 characters of text. It is probably built with JavaScript, which a simple fetcher does not run.
 - Email addresses and phone numbers are removed from all stored text, because they often belong to individuals and no later stage needs them. 92 pages had at least one removed.
 - The ambiguous matches need checking. For example lighthouseaccommodation.co.uk is a listings site for lighthouse stays, so it is probably not Seaham Lighthouse Ltd's own website.
+
+## Stage 4a: LLM enrichment
+
+Model: Claude Haiku 5.5 (`claude-haiku-5-5`) at low effort, with output validated against a Pydantic schema. 65 companies had scraped text (4 of the 69 scraped sites returned none). Run on 20 October 2026.
+
+### Cost
+
+| Prompt version | Calls | Input tokens | Output tokens | Cost |
+|---|---:|---:|---:|---:|
+| enrich-v1 | 65 | 241,365 | 21,205 | $0.035 |
+| enrich-v2 | 65 | 246,435 | 21,232 | $0.035 |
+
+About **$0.54 per 1,000 companies**, or roughly 3,800 input and 330 output tokens per company. Responses are cached, so re-running an unchanged prompt costs nothing.
+
+### Website check
+
+The LLM was also asked whether each website really belongs to the company. Compared with the stage 2 rules:
+
+| Stage 2 status | LLM: yes | LLM: unsure | LLM: no |
+|---|---:|---:|---:|
+| confirmed | 19 | 0 | 0 |
+| likely | 29 | 4 | 2 |
+| ambiguous | 7 | 1 | 3 |
+
+- It agreed with all 19 confirmed matches (company number on the site).
+- It confirmed 7 of the 11 ambiguous matches with text, often by spotting the registered postcode in the about page, which stage 2 did not check.
+- It caught 2 wrong "likely" matches that the rules could not: Nulite Ltd's match was a US lighting company, and Tru-Blu Financial's site belongs to a different company with a similar trading name.
+- It rejected 3 ambiguous matches, including a lighthouse holiday listings site matched to Seaham Lighthouse Ltd and a travel blog matched to Durham Micropub Ltd.
+
+That leaves **55 companies with a website the LLM agrees is theirs**: 25 B2B, 11 B2C, 15 both, 4 unclear. 49 of 65 profiles list at least one size signal and 26 a growth signal.
+
+### Personal data
+
+With prompt v1, 2 of 65 profiles named an individual (a blog author and a company director), despite an instruction not to. Prompt v2 says to refer to people by role only, and the pipeline now flags phrases that look like a named person after every run. v2 produced no flagged names. v2 also asks for countable size facts (staff, branches, years trading) rather than phrases like "family business".
+
+## Stage 4b: fit scoring and outreach openers
+
+Each of the 55 companies with a confirmed website was scored against 5 example customer descriptions (see `CUSTOMER_DESCRIPTIONS` in `lead_gen/config.py`), using the short stage 4a profile rather than the full page text. Run on 20 October 2026 with Claude Haiku 5.5.
+
+| Customer description | Strong (80+) | Possible (50-79) | Weak (20-49) | Not a fit (<20) |
+|---|---:|---:|---:|---:|
+| Card payments for local shops | 4 | 4 | 11 | 36 |
+| Managed IT support | 0 | 10 | 20 | 25 |
+| Packaging and warehouse supplies | 1 | 4 | 7 | 43 |
+| Health and safety training | 5 | 10 | 23 | 17 |
+| Van leasing for trades | 0 | 11 | 14 | 30 |
+
+The top leads look sensible. For card payments: an optician (92), a fish and chip shop (88) and a cafe (85). For safety training: an industrial plant maintenance firm (85), an M&E engineer (82) and a roofer (82). For van leasing: two refrigeration engineers and a roofer (72 to 75).
+
+- Few companies score 80+ for IT support or van leasing, because most websites do not state staff numbers or vehicle use, and the prompt lowers the score when evidence is missing.
+- The packaging supplier in the sample scored 12 for the packaging description: the model recognised it as a likely competitor rather than a customer.
+
+### Prompt changes
+
+score-v1 was tried on 3 companies first. Its openers were often pointless for poor fits ("this may not be a relevant fit"), sometimes added praise not in the profile ("recognised for their design"), and often started with "I noticed". score-v2 only writes an opener for scores of 50 or more (49 openers in total), caps them at about 40 words, and forbids facts that are not in the profile. Across v2: no opener starts with "I noticed", none use exclamation marks or em dashes, and the average length is 40 words (range 29 to 61, so the cap is not always kept).
+
+Scores near a band boundary are not perfectly stable between prompt versions: on the same 3 companies, one score moved from 88 to 80 and another from 35 to 50. The evaluation should judge bands, not exact numbers.
+
+### Cost
+
+275 calls, 341,815 input and 64,263 output tokens: **$0.066**, or about $0.24 per 1,000 company and description pairs. Total LLM spend for the project so far, including discarded prompt versions: **$0.14**.
