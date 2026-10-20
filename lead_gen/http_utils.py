@@ -84,6 +84,14 @@ class PoliteFetcher:
         self.robots[root] = parser
         return parser
 
+    def is_online(self) -> bool:
+        """Check our own internet connection, to tell a dead website from a dead connection."""
+        try:
+            self.client.head("https://www.google.com", timeout=10)
+            return True
+        except httpx.HTTPError:
+            return False
+
     def fetch(self, url: str) -> FetchResult:
         """Fetch one HTML page politely. Never raises for network problems."""
         root = site_root(url)

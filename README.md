@@ -26,7 +26,7 @@ This project uses company-level public data only:
 - Companies House records, which are published for public use.
 - The public homepage and about page of each company's own website.
 
-It does not collect names, emails or phone numbers of individuals, and it does not scrape LinkedIn or other social networks. Keeping to company-level data means the pipeline does not process personal data about individuals in the first place, which is the simplest way to stay within UK GDPR. The CRM data used for matching is synthetic.
+It does not collect names, emails or phone numbers of individuals (email addresses and phone numbers are stripped from scraped text before it is stored), and it does not scrape LinkedIn or other social networks. Keeping to company-level data means the pipeline does not process personal data about individuals in the first place, which is the simplest way to stay within UK GDPR. The CRM data used for matching is synthetic.
 
 Scraping is polite: the pipeline checks robots.txt, waits between requests to the same site and identifies itself with a clear user agent.
 

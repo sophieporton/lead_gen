@@ -2,7 +2,8 @@
 
 Companies House does not record websites, so for each company we:
 1. Search for its name and town with the Serper.dev API.
-2. Drop directory, registry and social media results.
+2. Drop directory, registry and social media results: a fixed list, plus any
+   domain that turns up in the results for several different companies.
 3. Score each remaining result with simple, explainable checks. The
    strongest is the company number: UK companies must show it on their
    website, and a namesake company never has the same number.
@@ -106,7 +107,7 @@ def search(client: httpx.Client, name: str, town: str | None) -> list[dict]:
 
 
 def store_candidates(con: duckdb.DuckDBPyConnection, company_number: str, results: list[dict]) -> None:
-    """Keep the top results, one per site, skipping directories and social media."""
+    """Store the results, one per site, skipping blocked directories and social media."""
     seen: set[str] = set()
     rank = 0
     for result in results:
@@ -174,12 +175,29 @@ def match_status(reasons: list[str]) -> str:
 STATUS_ORDER = ["confirmed", "likely", "ambiguous", "not_found"]
 
 
-def check_company(con: duckdb.DuckDBPyConnection, fetcher: PoliteFetcher, company: dict) -> str | None:
-    """Score every stored candidate for one company and record the best one.
+def repeated_domains(con: duckdb.DuckDBPyConnection) -> set[str]:
+    """Domains that came up in the search results for several different companies.
 
-    Returns the match status, or None if every candidate site failed to load
-    (most likely our own connection). Nothing is recorded in that case, so
-    the company is retried on the next run instead of being marked not_found.
+    A company's own website only belongs to one company, so a domain that
+    appears for many of them is a directory or listing site.
+    """
+    rows = con.execute(
+        "SELECT domain FROM website_candidates GROUP BY domain "
+        "HAVING count(DISTINCT company_number) >= ?",
+        [config.DIRECTORY_MIN_COMPANIES],
+    ).fetchall()
+    return {r[0] for r in rows}
+
+
+def check_company(
+    con: duckdb.DuckDBPyConnection, fetcher: PoliteFetcher, company: dict, directories: set[str]
+) -> str | None:
+    """Score the top stored candidates for one company and record the best one.
+
+    Candidates on directory domains are marked and skipped. Returns the match
+    status, or None if every visited site failed to load and our own
+    connection is down. Nothing is recorded in that case, so the company is
+    retried on the next run instead of being marked not_found.
     """
     candidates = con.execute(
         "SELECT rank, url, domain, title FROM website_candidates WHERE company_number = ? ORDER BY rank",
@@ -187,32 +205,37 @@ def check_company(con: duckdb.DuckDBPyConnection, fetcher: PoliteFetcher, compan
     ).fetchall()
 
     best_url, best_status, best_score = None, "not_found", -1
-    failures = 0
+    checked = failures = 0
     for rank, url, domain, title in candidates:
-        # Check the homepage, where the company number usually sits in the footer.
-        homepage = site_root(url) + "/"
-        result = fetcher.fetch(homepage)
-        reasons = score_candidate(company, domain, title, result.html)
-        if not result.robots_allowed:
-            reasons.append("robots_disallowed")
-        elif result.error:
-            reasons.append("fetch_failed")
-            failures += result.status is None  # no response at all, not e.g. a 404
-        score = sum(SCORES.get(r, 0) for r in reasons)
+        if domain in directories:
+            reasons, score = ["repeated_domain"], None
+        elif checked >= config.CANDIDATES_TO_CHECK or best_status == "confirmed":
+            continue  # leave the remaining candidates unscored
+        else:
+            checked += 1
+            # Check the homepage, where the company number usually sits in the footer.
+            homepage = site_root(url) + "/"
+            result = fetcher.fetch(homepage)
+            reasons = score_candidate(company, domain, title, result.html)
+            if not result.robots_allowed:
+                reasons.append("robots_disallowed")
+            elif result.error:
+                reasons.append("fetch_failed")
+                failures += result.status is None  # no response at all, not e.g. a 404
+            score = sum(SCORES.get(r, 0) for r in reasons)
+
+            status = match_status(reasons)
+            if (STATUS_ORDER.index(status), -score) < (STATUS_ORDER.index(best_status), -best_score):
+                best_url = result.url if result.html else homepage
+                best_status, best_score = status, score
+
         con.execute(
             "UPDATE website_candidates SET match_score = ?, match_reasons = ? "
             "WHERE company_number = ? AND rank = ?",
             [score, reasons, company["company_number"], rank],
         )
 
-        status = match_status(reasons)
-        if (STATUS_ORDER.index(status), -score) < (STATUS_ORDER.index(best_status), -best_score):
-            best_url = result.url if result.html else homepage
-            best_status, best_score = status, score
-        if best_status == "confirmed":
-            break  # no need to visit the remaining sites
-
-    if candidates and failures == len(candidates):
+    if checked and failures == checked and not fetcher.is_online():
         return None
 
     con.execute(
@@ -239,20 +262,28 @@ def main() -> None:
         ]
         print(f"{len(companies)} companies still need a website check.")
 
+        # Step 1: search for every company first, so we can see which domains
+        # turn up for many companies before deciding what is a directory.
         searched = {r[0] for r in con.execute("SELECT DISTINCT company_number FROM website_candidates").fetchall()}
-        fetcher = PoliteFetcher()
+        skipped = 0
         with httpx.Client(timeout=config.REQUEST_TIMEOUT_SECONDS) as serper:
-            skipped = 0
-            for company in tqdm(companies, desc="Finding websites"):
-                if company["company_number"] not in searched:
-                    try:
-                        results = search(serper, company["name"], company["post_town"])
-                    except httpx.TransportError:
-                        skipped += 1  # connection problem: retry on the next run
-                        continue
-                    store_candidates(con, company["company_number"], results)
-                if check_company(con, fetcher, company) is None:
-                    skipped += 1
+            for company in tqdm([c for c in companies if c["company_number"] not in searched], desc="Searching"):
+                try:
+                    results = search(serper, company["name"], company["post_town"])
+                except httpx.TransportError:
+                    skipped += 1  # connection problem: retry on the next run
+                    continue
+                store_candidates(con, company["company_number"], results)
+                searched.add(company["company_number"])
+
+        directories = repeated_domains(con)
+        print(f"{len(directories)} domains appear for {config.DIRECTORY_MIN_COMPANIES}+ companies and are treated as directories.")
+
+        # Step 2: visit and score the remaining candidates.
+        fetcher = PoliteFetcher()
+        for company in tqdm([c for c in companies if c["company_number"] in searched], desc="Checking sites"):
+            if check_company(con, fetcher, company, directories) is None:
+                skipped += 1
         if skipped:
             print(f"\n{skipped} companies hit connection errors. Re-run to retry them.")
 

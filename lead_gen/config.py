@@ -76,7 +76,15 @@ RANDOM_SEED = 42
 # --- Stage 2: website finding ------------------------------------------------
 
 SERPER_URL = "https://google.serper.dev/search"
-SEARCH_RESULTS_TO_KEEP = 5
+# Store up to 10 results per search, then visit the top 5 that are not
+# directories. Visiting fewer keeps the number of requests to websites low.
+SEARCH_RESULTS_TO_KEEP = 10
+CANDIDATES_TO_CHECK = 5
+
+# A domain that comes up in the results for this many different companies is
+# a directory, not a company's own website. This catches the many directory
+# sites that are not on the fixed list below (e.g. doogal.co.uk, tracxn.com).
+DIRECTORY_MIN_COMPANIES = 3
 
 # Directory, registry and social sites that list companies but are never the
 # company's own website.
@@ -127,6 +135,9 @@ BLOCKED_DOMAINS = {
     "x.com",
     "youtube.com",
     "tiktok.com",
+    "threads.com",
+    "yelp.com",
+    "wheree.com",
     "trustpilot.com",
     "checkatrade.com",
     "yelp.co.uk",
@@ -136,8 +147,7 @@ BLOCKED_DOMAINS = {
 
 # --- Stage 3: scraping -------------------------------------------------------
 
-# TODO: replace with the public GitHub repo URL once it exists.
-USER_AGENT = "LeadGenPortfolioBot/0.1 (+https://github.com/)"
+USER_AGENT = "LeadGenPortfolioBot/0.1 (+https://github.com/sophieporton/lead_gen)"
 REQUEST_TIMEOUT_SECONDS = 15
 PER_DOMAIN_DELAY_SECONDS = 3.0
 MAX_RESPONSE_BYTES = 2 * 1024 * 1024
