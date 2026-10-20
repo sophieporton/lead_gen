@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Data (raw downloads and the local database are rebuilt by the pipeline)
+data/raw/
+*.duckdb
+*.duckdb.wal
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local assistant instructions
+CLAUDE.md
