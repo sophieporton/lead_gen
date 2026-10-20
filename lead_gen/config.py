@@ -211,3 +211,16 @@ CUSTOMER_DESCRIPTIONS = {
         "engineering, industrial maintenance, care and hospitality."
     ),
 }
+
+# --- Stage 5: evaluation -----------------------------------------------------
+
+EVAL_DIR = PROJECT_ROOT / "eval"
+LABELLING_SHEET = EVAL_DIR / "labelling_sheet.xlsx"
+EVAL_SAMPLE_SIZE = 25
+
+# The customer description with the widest spread of scores, used for
+# hand-labelling fit. Labelling all five would take too long.
+EVAL_DESCRIPTIONS = ["safety_training"]
+
+# Fit score bands, used for both the prompt and the evaluation.
+FIT_BANDS = [("strong", 80), ("possible", 50), ("weak", 20), ("not a fit", 0)]

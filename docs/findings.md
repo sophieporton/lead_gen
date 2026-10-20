@@ -156,3 +156,34 @@ Scores near a band boundary are not perfectly stable between prompt versions: on
 ### Cost
 
 275 calls, 341,815 input and 64,263 output tokens: **$0.066**, or about $0.24 per 1,000 company and description pairs. Total LLM spend for the project so far, including discarded prompt versions: **$0.14**.
+
+## Stage 6: CRM cleaning, matching and HubSpot export
+
+The CRM export is synthetic (`lead_gen/synthetic_crm.py`): 220 rows for 170 companies, made deliberately messy. 150 companies are fictional, with `.example` domains, and 20 are real leads from stage 4, as if the sales team already had them. 50 rows are duplicates with different mistakes: typos, "Ltd" vs "Limited", websites with and without `www`, postcodes in any format, "Darlo" for Darlington, company numbers missing their leading zero. A separate answer key records which rows are the same company, so matching can be scored exactly.
+
+### Data quality before and after cleaning
+
+| Measure | Before | After |
+|---|---:|---:|
+| Rows | 220 | 173 |
+| Duplicate rows | 21.4% | 0% |
+| Valid, consistently formatted postcode | 52.7% | 93.1% |
+| Website stored as a bare domain | 10.9% | 86.1% |
+| Distinct industry values | 42 | 11 |
+| Distinct town spellings | 42 | 19 |
+| Employee count usable as a number | 20.9% | 69.9% |
+| Dates in ISO format | 32.7% | 100% |
+
+The remaining gaps are values that were missing in every copy of a record, which cleaning cannot invent.
+
+### Duplicate detection and lead matching
+
+Records are the same company if they share a company number or website domain, or have the same cleaned name with agreeing postcodes, or very similar names (90%+) with the same postcode.
+
+- **Duplicates:** 56 of 60 duplicate pairs found, with no false merges. The 4 missed pairs combine a typo with missing data, e.g. "Hadria Couriers Group Ltd" with a postcode but no website, and "Hadrian Couriers Group" with a website but no postcode.
+- **Existing leads:** all 20 of our leads already in the CRM were found, with no false matches (16 by company number, 3 by domain, 1 by name). The other 35 leads are new.
+- **A rule we tried and dropped:** allowing similar names to match when one postcode is missing found 59 of 60 pairs, but wrongly merged "Tees Print & Design" with "Bede Print & Design" (90% similar, because the long shared words outweigh the short distinctive one). In a CRM, two companies merged into one loses data, while a missed duplicate only leaves an extra row, so the stricter rule was kept.
+
+### HubSpot export
+
+`data/exports/hubspot_companies.csv` has the 35 new leads, sorted by best fit score, with HubSpot's standard company columns (name, domain, city, postcode, description, lifecycle stage) and custom properties for the Companies House number, sector, market, size and growth signals, all five fit scores, and the best-fitting description with its reason and opener. 17 leads have no opener because none of their fit scores reached 50.
