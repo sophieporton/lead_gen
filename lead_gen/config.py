@@ -178,7 +178,7 @@ LLM_PAGE_CHARS = 6_000
 
 # --- Stage 4b: fit scoring and outreach openers ------------------------------
 
-SCORE_PROMPT_VERSION = "score-v2"
+SCORE_PROMPT_VERSION = "score-v3"
 
 # Example customer descriptions ("who is selling, and to whom") that every
 # lead is scored against. The deployed dashboard shows these pre-computed

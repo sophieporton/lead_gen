@@ -187,3 +187,24 @@ Records are the same company if they share a company number or website domain, o
 ### HubSpot export
 
 `data/exports/hubspot_companies.csv` has the 35 new leads, sorted by best fit score, with HubSpot's standard company columns (name, domain, city, postcode, description, lifecycle stage) and custom properties for the Companies House number, sector, market, size and growth signals, all five fit scores, and the best-fitting description with its reason and opener. 17 leads have no opener because none of their fit scores reached 50.
+
+## Stage 5: evaluation against hand labels
+
+25 companies were sampled at random from the 65 enriched ones and labelled by hand from their websites, without seeing the LLM's answers. One website did not load, leaving 24. Full results, including every disagreement: [eval/results.md](../eval/results.md).
+
+| Question | Agreement |
+|---|---|
+| Does the website belong to the company? | 21 of 24 (88%) |
+| B2B, B2C or both? | 15 of 24 (62%) |
+| Fit for the safety training description, same band (score-v3) | 6 of 21 (29%) |
+| Fit, within one band (score-v3) | 16 of 21 (76%) |
+
+- **Website match.** All 3 disagreements were the LLM saying "unsure" where the labeller said "yes", so it never wrongly accepted or rejected a site. One was a reasonable catch: Libra Seafood's website shows a company number one digit different from the registered one.
+- **B2B or B2C.** 6 of the 9 disagreements involve "both", e.g. a scaffolder that works on homes as well as commercial sites. The line between "B2B" and "both" is a judgement call, and a clearer definition would help both the labeller and the prompt.
+- **Fit, first attempt (score-v2): 3 of 21 in the same band, 8 within one.** The LLM scored lower than the labeller 17 times out of 18 disagreements. Two causes:
+  1. The prompt said missing information should lower the score, and small company websites almost never state headcount. Clearly physical businesses (a forklift company, a sign maker, a bodyshop, a refrigeration contractor) were marked down for it.
+  2. The brief was read differently. The labeller treated any employer as a possible customer for health and safety training, which is true in law. The LLM took "best fit: site-based or physical work" literally and scored office businesses (an IT support firm, a data consultancy, a recruiter) as not a fit.
+- **Fit, after the fix (score-v3).** The prompt now says not to lower a score for missing headcount when the kind of work clearly implies employees. Same-band agreement rose from 14% to 29%, and within-one-band from 38% to 76%. Scores did not inflate across the board: for card payments and packaging the share of "not a fit" stayed about the same. The 3 remaining complete disagreements are all office businesses, i.e. cause 2, which is about the brief rather than the model.
+- **Caveat.** v3 was tuned on the same 21 labels it is measured against, so the v3 figures are likely optimistic. A fair test would label a fresh set of companies. The v2 report is kept at [eval/results_score-v2.md](../eval/results_score-v2.md).
+
+score-v3 re-scored all 275 company and description pairs for $0.076. Total LLM spend for the project, including all discarded prompt versions: $0.22.

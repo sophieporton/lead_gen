@@ -54,7 +54,7 @@ Fit score scale:
 - 0 to 19: not a sensible prospect, or the profile is too thin to judge.
 
 Rules:
-- Base the score only on facts in the profile. Missing information lowers the score; do not assume.
+- Base the score on facts in the profile. Small company websites rarely state how many staff they have, so do not lower the score just because headcount is missing when the kind of work clearly implies employees, such as installation, repairs, manufacturing, site work or running premises. Lower the score when the facts point away from the ideal customer, or when the profile is too thin to tell what the company does.
 - The reason is one sentence and should mention the specific facts that drove the score.
 - Only write an opener if the fit score is 50 or more. Otherwise leave it as an empty string.
 - The opener is two sentences and at most 40 words. The first mentions one specific fact from the profile; the second links it to what the sales team offers. Vary how it starts: do not begin with "I noticed". Plain and direct, no hype, no exclamation marks, no em dashes, and no greeting line.

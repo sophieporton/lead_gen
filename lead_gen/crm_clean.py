@@ -86,6 +86,8 @@ def clean_display_name(name: str | None) -> str | None:
     name = re.sub(r"\s+", " ", name.strip())
     if name.isupper() or name.islower():
         name = name.title()
+        # Title case turns short acronyms into words: put them back.
+        name = re.sub(r"\b(Ne|Uk|It|Llp|Cic|Plc)\b", lambda m: m.group(1).upper(), name)
     return re.sub(r"\b(ltd\.?|limited)$", "Ltd", name, flags=re.IGNORECASE)
 
 

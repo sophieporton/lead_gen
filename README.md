@@ -2,7 +2,7 @@
 
 A pipeline that finds small businesses in the North East of England, uses an LLM to work out what they do and how well they fit a target customer, cleans the results against a CRM export, and shows everything in a dashboard.
 
-**Status:** work in progress (Week 3 of 4). Evaluation results and the dashboard are still to come.
+**Status:** work in progress (Week 3 of 4). The dashboard is still to come.
 
 ## What it does
 
@@ -15,7 +15,7 @@ Companies House  ->  find websites  ->  scrape  ->  LLM enrichment  ->  evaluate
 2. **Find websites.** Companies House does not store websites, so each company is searched by name and town and the results are checked against the company number and postcode.
 3. **Scrape.** The homepage and about page of each matched website, respecting robots.txt.
 4. **Enrich.** Claude Haiku 5.5 reads each site and returns a profile validated with Pydantic: what they sell, who to, B2B or B2C, size and growth signals, and whether the site really is theirs. It then scores each lead against example customer descriptions and drafts a short outreach opener. Every call is cached and costed.
-5. **Evaluate.** Hand labels for 25 companies, compared with the LLM's answers. _In progress._
+5. **Evaluate.** Hand labels for 25 companies, compared with the LLM's answers, with every disagreement listed in [eval/results.md](eval/results.md).
 6. **Clean for the CRM.** A synthetic, deliberately messy CRM export is cleaned, de-duplicated and matched against the new leads, and the new ones are exported as a HubSpot-ready CSV.
 7. **Dashboard.** _Week 4._
 
@@ -59,6 +59,7 @@ python -m lead_gen.hubspot_export  # stage 6c: HubSpot-ready CSV of new leads
 Full results so far are in [docs/findings.md](docs/findings.md). In short:
 
 - Of 200 sampled companies, 55 (27.5%) have a website the pipeline and the LLM agree is theirs. Property companies almost never do (1 of 33).
-- LLM enrichment and scoring cost about $0.54 per 1,000 companies, plus $0.24 per 1,000 fit scores, with Claude Haiku 5.5.
+- LLM enrichment and scoring cost about $0.54 per 1,000 companies, plus $0.28 per 1,000 fit scores, with Claude Haiku 5.5. The whole project so far has cost $0.22 in LLM calls.
 - The LLM caught wrong website matches the rules missed, such as a US company with a similar name.
+- Against hand labels, the LLM's website check agreed 88% of the time. Fit scoring started at 14% exact agreement because the prompt penalised websites that don't state headcount; after fixing that, 76% of scores were within one band of the human label (likely optimistic, as the fix was tuned on the same labels).
 - CRM matching found 56 of 60 duplicate pairs and all 20 existing leads, with no false merges.
