@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* Colour tokens. Every colour in the site is one of these roles, so light and
+   dark mode swap in one place. Dark values are their own validated steps,
+   not an automatic inversion. */
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --surface-raised: #ffffff;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #6f6e69;
+  --hairline: #e1e0d9;
+  --border: rgba(11, 11, 11, 0.1);
+  --accent: #2a78d6;
+  --accent-ink: #1c5cab;
+  --accent-wash: #e8f1fc;
+
+  /* Fit bands: one blue ramp, strongest = most contrast with the surface.
+     Validated as an ordinal ramp (steps 600, 500, 350, 250). */
+  --band-strong: #184f95;
+  --band-possible: #256abf;
+  --band-weak: #5598e7;
+  --band-none: #86b6ef;
+
+  --good: #006300;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --surface-raised: #222220;
+    --text-primary: #f0efec;
+    --text-secondary: #c3c2b7;
+    --text-muted: #9a9890;
+    --hairline: #2c2c2a;
+    --border: rgba(255, 255, 255, 0.1);
+    --accent: #3987e5;
+    --accent-ink: #86b6ef;
+    --accent-wash: #16263a;
+    /* Dark ordinal ramp (250, 350, 450, 600): strongest is lightest. */
+    --band-strong: #86b6ef;
+    --band-possible: #5598e7;
+    --band-weak: #2a78d6;
+    --band-none: #184f95;
+    --good: #0ca30c;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --surface-raised: #222220;
+  --text-primary: #f0efec;
+  --text-secondary: #c3c2b7;
+  --text-muted: #9a9890;
+  --hairline: #2c2c2a;
+  --border: rgba(255, 255, 255, 0.1);
+  --accent: #3987e5;
+  --accent-ink: #86b6ef;
+  --accent-wash: #16263a;
+  --band-strong: #86b6ef;
+  --band-possible: #5598e7;
+  --band-weak: #2a78d6;
+  --band-none: #184f95;
+  --good: #0ca30c;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-raised: var(--surface-raised);
+  --color-ink: var(--text-primary);
+  --color-ink-2: var(--text-secondary);
+  --color-ink-3: var(--text-muted);
+  --color-hairline: var(--hairline);
+  --color-line: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-wash: var(--accent-wash);
+  --color-good: var(--good);
+  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--page);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+/* Numbers that line up in columns (tables, axis ticks). */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}

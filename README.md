@@ -8,7 +8,7 @@ A pipeline that finds small businesses in the North East of England, uses an LLM
 
 ```
 Companies House  ->  find websites  ->  scrape  ->  LLM enrichment  ->  evaluate  ->  CRM clean  ->  dashboard
-(bulk data + API)    (Serper search)    (httpx)     (structured output)  (hand labels)  (dedupe)      (Streamlit)
+(bulk data + API)    (Serper search)    (httpx)     (structured output)  (hand labels)  (dedupe)      (Next.js)
 ```
 
 1. **Find companies.** Active companies with a registered office in the NE, SR, DH, TS or DL postcode areas that file small company accounts.
@@ -17,7 +17,7 @@ Companies House  ->  find websites  ->  scrape  ->  LLM enrichment  ->  evaluate
 4. **Enrich.** Claude Haiku 5.5 reads each site and returns a profile validated with Pydantic: what they sell, who to, B2B or B2C, size and growth signals, and whether the site really is theirs. It then scores each lead against example customer descriptions and drafts a short outreach opener. Every call is cached and costed.
 5. **Evaluate.** Hand labels for 25 companies, compared with the LLM's answers, with every disagreement listed in [eval/results.md](eval/results.md).
 6. **Clean for the CRM.** A synthetic, deliberately messy CRM export is cleaned, de-duplicated and matched against the new leads, and the new ones are exported as a HubSpot-ready CSV.
-7. **Dashboard.** _Week 4._
+7. **Dashboard.** A static Next.js site in [web/](web/) that reads a company-level snapshot of the results. It makes no live LLM calls, so it costs nothing to run.
 
 ## Data and GDPR
 
@@ -52,6 +52,7 @@ python -m lead_gen.evaluate sheet  # stage 5: create the labelling sheet
 python -m lead_gen.synthetic_crm   # stage 6a: generate the synthetic CRM export
 python -m lead_gen.crm_clean       # stage 6b: clean, de-duplicate and match
 python -m lead_gen.hubspot_export  # stage 6c: HubSpot-ready CSV of new leads
+python -m lead_gen.export_dashboard  # data snapshot for the web dashboard (see web/README.md)
 ```
 
 ## Results
