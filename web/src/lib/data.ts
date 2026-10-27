@@ -31,9 +31,7 @@ export type Lead = {
   scores: Record<string, Score>;
 };
 
-export type Description = { key: string; label: string; text: string };
-
-type Agreement = { agree: number; total: number; pairs: Record<string, number> };
+export type Description = { key: string; label: string; keywords: string[]; text: string };
 
 export type Dashboard = {
   generated: string;
@@ -56,18 +54,6 @@ export type Dashboard = {
     score_per_1000_pairs: number;
     project_total_usd: number;
     project_total_calls: number;
-  };
-  evaluation: {
-    labelled: number;
-    description_key: string;
-    website: Agreement;
-    market: Agreement;
-    fit: Agreement & {
-      exact: number;
-      within_one: number;
-      before_fix: { exact: number; within_one: number; total: number };
-    };
-    fit_disagreements: { name: string; human: Band; llm: Band; llm_score: number; llm_reason: string }[];
   };
 };
 

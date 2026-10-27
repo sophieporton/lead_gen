@@ -2,7 +2,7 @@
 
 The dashboard is a static website: it has no database and makes no LLM or
 API calls. Everything it shows comes from one JSON file written here, from
-the pipeline's DuckDB database and evaluation labels.
+the pipeline's DuckDB database.
 
 Only company-level data goes into the file: Companies House details, what
 each company's website says about the business, and the pipeline's scores.
@@ -16,7 +16,6 @@ Re-run it, then rebuild the site, whenever the pipeline results change.
 
 import csv
 import json
-from collections import Counter
 from datetime import date
 
 from lead_gen import config
@@ -25,25 +24,35 @@ from lead_gen.crm_clean import (
 )
 from lead_gen.synthetic_crm import CRM_EXPORT
 from lead_gen.db import connect
-from lead_gen.evaluate import BAND_ORDER, llm_answers, read_labels, score_to_band
+from lead_gen.evaluate import score_to_band
 from lead_gen.find_companies import eligible_candidates, latest_bulk_csv, load_north_east
 
 DASHBOARD_JSON = config.PROJECT_ROOT / "web" / "src" / "data" / "dashboard.json"
 
-# Short labels for the example customer descriptions.
-DESCRIPTION_LABELS = {
-    "it_support": "Managed IT support",
-    "van_leasing": "Van leasing for trades",
-    "card_payments": "Card payments for local shops",
-    "packaging": "Packaging and warehouse supplies",
-    "safety_training": "Health and safety training",
+# Short labels for the example customer descriptions, and the words a
+# visitor might type into the demo's search box to find each one.
+DESCRIPTION_META = {
+    "it_support": ("Managed IT support",
+                   ["it support", "managed it", "it services", "computer", "cyber", "microsoft", "365", "tech support", "it"]),
+    "van_leasing": ("Van leasing for trades",
+                    ["van", "vans", "vehicle", "vehicles", "fleet", "lease", "leasing"]),
+    "card_payments": ("Card payments for local shops",
+                      ["card machine", "card", "payment", "payments", "till", "epos", "pos", "terminal"]),
+    "packaging": ("Packaging and warehouse supplies",
+                  ["packaging", "pallet", "boxes", "warehouse", "shipping", "wrap", "consumables"]),
+    "safety_training": ("Health and safety training",
+                        ["health and safety", "safety", "first aid", "training", "manual handling"]),
+    "commercial_cleaning": ("Commercial cleaning",
+                            ["cleaning", "cleaner", "cleaners", "office cleaning", "janitorial"]),
+    "web_marketing": ("Websites and local marketing",
+                      ["website", "websites", "web design", "seo", "marketing", "social media", "digital"]),
+    "bookkeeping": ("Bookkeeping and payroll",
+                    ["bookkeeping", "accounting", "accountancy", "accounts", "payroll", "accountant", "tax", "vat"]),
+    "workwear": ("Workwear and PPE",
+                 ["workwear", "uniform", "uniforms", "ppe", "clothing", "hi vis", "embroidery"]),
+    "ev_charging": ("EV charge points",
+                    ["ev", "electric vehicle", "charging", "charge point", "charge points", "charger", "chargers"]),
 }
-
-# Fit-score agreement from the first scoring prompt, before the headcount
-# fix (see eval/results_score-v2.md). Kept so the dashboard can show the
-# before and after honestly.
-FIT_AGREEMENT_V2 = {"exact": 3, "within_one": 8, "total": 21}
-
 
 def funnel(con) -> dict:
     """Counts at each stage, from all NE companies down to new leads."""
@@ -139,48 +148,6 @@ def crm(con) -> dict:
     }
 
 
-def evaluation() -> dict:
-    """Agreement between hand labels and the LLM."""
-    labels = read_labels()
-    llm = llm_answers([row["company_number"] for row in labels])
-    key = config.EVAL_DESCRIPTIONS[0]
-
-    def agreement(field: str, llm_field: str) -> dict:
-        pairs = [(row[field], llm[row["company_number"]][llm_field]) for row in labels if row[field]]
-        return {"agree": sum(h == m for h, m in pairs), "total": len(pairs),
-                "pairs": Counter(f"{h}|{m}" for h, m in pairs)}
-
-    fit_pairs = [
-        (row[f"fit_{key}"], score_to_band(llm[row["company_number"]]["fit_score"]))
-        for row in labels
-        if row[f"fit_{key}"] and llm[row["company_number"]]["fit_score"] is not None
-    ]
-    disagreements = []
-    for row in labels:
-        answer = llm[row["company_number"]]
-        band = score_to_band(answer["fit_score"])
-        if row[f"fit_{key}"] and band and row[f"fit_{key}"] != band:
-            disagreements.append({
-                "name": clean_display_name(row["name"]),
-                "human": row[f"fit_{key}"], "llm": band, "llm_score": answer["fit_score"],
-                "llm_reason": answer["fit_reason"],
-            })
-    return {
-        "labelled": len(labels),
-        "description_key": key,
-        "website": agreement("website_is_theirs", "website"),
-        "market": agreement("market", "market"),
-        "fit": {
-            "exact": sum(h == m for h, m in fit_pairs),
-            "within_one": sum(abs(BAND_ORDER.index(h) - BAND_ORDER.index(m)) <= 1 for h, m in fit_pairs),
-            "total": len(fit_pairs),
-            "pairs": Counter(f"{h}|{m}" for h, m in fit_pairs),
-            "before_fix": FIT_AGREEMENT_V2,
-        },
-        "fit_disagreements": disagreements,
-    }
-
-
 def costs(con) -> dict:
     """LLM cost per 1,000 records for the current prompts, and the project total."""
     def per_thousand(stage: str, version: str) -> float:
@@ -205,7 +172,7 @@ def main() -> None:
         data = {
             "generated": date.today().isoformat(),
             "descriptions": [
-                {"key": k, "label": DESCRIPTION_LABELS[k], "text": text}
+                {"key": k, "label": DESCRIPTION_META[k][0], "keywords": DESCRIPTION_META[k][1], "text": text}
                 for k, text in config.CUSTOMER_DESCRIPTIONS.items()
             ],
             "bands": [{"band": band, "min_score": floor} for band, floor in config.FIT_BANDS],
@@ -214,7 +181,6 @@ def main() -> None:
             "crm": crm(con),
             "costs": costs(con),
         }
-    data["evaluation"] = evaluation()
 
     DASHBOARD_JSON.parent.mkdir(parents=True, exist_ok=True)
     DASHBOARD_JSON.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")

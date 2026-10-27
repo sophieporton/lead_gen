@@ -1,30 +1,145 @@
 {
-  "generated": "2026-10-22",
+  "generated": "2026-10-26",
   "descriptions": [
     {
       "key": "it_support",
       "label": "Managed IT support",
+      "keywords": [
+        "it support",
+        "managed it",
+        "it services",
+        "computer",
+        "cyber",
+        "microsoft",
+        "365",
+        "tech support",
+        "it"
+      ],
       "text": "We provide managed IT support, cybersecurity and Microsoft 365 setup for small businesses in the North East with roughly 5 to 50 staff. Best fit: B2B firms with an office, several staff on computers and no in-house IT person, such as engineering firms, accountants, recruiters and distributors."
     },
     {
       "key": "van_leasing",
       "label": "Van leasing for trades",
+      "keywords": [
+        "van",
+        "vans",
+        "vehicle",
+        "vehicles",
+        "fleet",
+        "lease",
+        "leasing"
+      ],
       "text": "We lease and maintain vans and light commercial vehicles for trades and service businesses. Best fit: companies whose staff travel to customer sites, such as electricians, plumbers, builders, landscapers and maintenance contractors, especially ones that are growing or hiring."
     },
     {
       "key": "card_payments",
       "label": "Card payments for local shops",
+      "keywords": [
+        "card machine",
+        "card",
+        "payment",
+        "payments",
+        "till",
+        "epos",
+        "pos",
+        "terminal"
+      ],
       "text": "We supply card payment terminals and till systems to independent customer-facing businesses. Best fit: B2C businesses with physical premises that take payments in person, such as shops, cafes, pubs, salons, vets and opticians."
     },
     {
       "key": "packaging",
       "label": "Packaging and warehouse supplies",
+      "keywords": [
+        "packaging",
+        "pallet",
+        "boxes",
+        "warehouse",
+        "shipping",
+        "wrap",
+        "consumables"
+      ],
       "text": "We sell packaging, pallet wrap and warehouse consumables to businesses that ship physical goods. Best fit: manufacturers, wholesalers, distributors and online retailers with their own warehouse or production site."
     },
     {
       "key": "safety_training",
       "label": "Health and safety training",
+      "keywords": [
+        "health and safety",
+        "safety",
+        "first aid",
+        "training",
+        "manual handling"
+      ],
       "text": "We deliver accredited health and safety, first aid and manual handling training to employers. Best fit: firms with site-based or physical work and a team of employees, such as construction, engineering, industrial maintenance, care and hospitality."
+    },
+    {
+      "key": "commercial_cleaning",
+      "label": "Commercial cleaning",
+      "keywords": [
+        "cleaning",
+        "cleaner",
+        "cleaners",
+        "office cleaning",
+        "janitorial"
+      ],
+      "text": "We provide commercial cleaning for offices, shops, clinics and hospitality venues. Best fit: businesses with their own premises that staff or customers use every day, such as cafes, pubs, clinics, opticians, gyms, workshops and offices with a team."
+    },
+    {
+      "key": "web_marketing",
+      "label": "Websites and local marketing",
+      "keywords": [
+        "website",
+        "websites",
+        "web design",
+        "seo",
+        "marketing",
+        "social media",
+        "digital"
+      ],
+      "text": "We design websites and run local search and social media marketing for small businesses. Best fit: customer-facing businesses that win work locally and would gain from being found online, such as trades, salons, cafes, clinics and independent shops."
+    },
+    {
+      "key": "bookkeeping",
+      "label": "Bookkeeping and payroll",
+      "keywords": [
+        "bookkeeping",
+        "accounting",
+        "accountancy",
+        "accounts",
+        "payroll",
+        "accountant",
+        "tax",
+        "vat"
+      ],
+      "text": "We provide bookkeeping, payroll and year-end accounts for small limited companies. Best fit: owner-managed firms with a few employees and regular invoicing, such as trades, small manufacturers, agencies and independent retailers. Not accountancy firms themselves."
+    },
+    {
+      "key": "workwear",
+      "label": "Workwear and PPE",
+      "keywords": [
+        "workwear",
+        "uniform",
+        "uniforms",
+        "ppe",
+        "clothing",
+        "hi vis",
+        "embroidery"
+      ],
+      "text": "We supply branded workwear, uniforms and PPE. Best fit: businesses whose staff work on site or face customers in uniform, such as builders, engineers, maintenance firms, cleaners, hospitality and care providers."
+    },
+    {
+      "key": "ev_charging",
+      "label": "EV charge points",
+      "keywords": [
+        "ev",
+        "electric vehicle",
+        "charging",
+        "charge point",
+        "charge points",
+        "charger",
+        "chargers"
+      ],
+      "text": "We install electric vehicle charge points at business premises. Best fit: businesses with their own car park or yard and company vehicles or visitors, such as garages, vehicle hire firms, hotels, retail sites and industrial units."
     }
   ],
   "bands": [
@@ -115,6 +230,36 @@
           "band": "weak",
           "reason": "An independent optometrist serving individual consumers (B2C) in Cramlington, with a small team of opticians and assistants, but its work is retail eye care rather than the site-based or physical work the training targets.",
           "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 90,
+          "band": "strong",
+          "reason": "An independent optometrist with its own premises in Cramlington, a team of four dispensing opticians plus assistants and optometrists, and customers visiting in person, which matches the ideal customer of clinics and shops with their own premises used daily.",
+          "opener": "Your practice in Cramlington has grown with a team of four dispensing opticians plus optical assistants and optometrists, and customers visit you in person every day. We provide commercial cleaning for clinics and shops, keeping your premises fresh and clean for both staff and patients."
+        },
+        "web_marketing": {
+          "score": 88,
+          "band": "strong",
+          "reason": "An independent B2C optometrist in Cramlington serving local customers, with a team of four dispensing opticians and optical assistants, matches the customer-facing local business the team targets.",
+          "opener": "Your independent practice in Cramlington has served local customers since 1992, and your team has grown with the business. We design websites and run local search marketing that helps neighbourhood businesses like yours get found by people searching nearby."
+        },
+        "bookkeeping": {
+          "score": 35,
+          "band": "weak",
+          "reason": "The company is an independent optometrist in Cramlington with a team of optometrists, dispensing opticians and assistants, so it has employees, but it sells B2C to individual customers rather than being an owner-managed trade, manufacturer, agency or retailer with regular invoicing, making it a weak match.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 35,
+          "band": "weak",
+          "reason": "An independent optometrist serving individual local customers in Cramlington, with staff who work in a clinic rather than on site or in uniform, so it is only a partial match for branded workwear and PPE.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "An independent optometrist selling eye examinations and glasses to individual local customers in Cramlington, with no mention of company vehicles, a car park or yard, or business premises that would suit EV charge points, so it falls outside the ideal customer.",
+          "opener": null
         }
       }
     },
@@ -172,6 +317,36 @@
           "score": 25,
           "band": "weak",
           "reason": "ALL-TEMPS is a recruitment agency that places HGV, skilled trade, industrial and office workers with other employers, so it does not run the site-based or physical work that is the ideal customer, though its 200 agency workers and industrial placements give a weak link to the training offer.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "The profile describes a recruitment agency placing workers across the UK with no owned premises that staff or customers use daily, so it does not match the cleaning customers the team serves.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The company is a B2B recruitment agency placing HGV, trades and office workers with employers, so it is not a customer-facing local business like the trades, salons, cafes, clinics or shops the sales team targets, despite its South Shields base.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 65,
+          "band": "possible",
+          "reason": "The company is a UK recruitment agency with over 30 years in the industry and over 200 agency workers on its books, which fits the agencies in the best-fit list and implies regular invoicing, but its staff numbers are not stated.",
+          "opener": "All-Temps has placed HGV, trades and office workers for over 30 years. Our bookkeeping, payroll and year-end accounts could take the invoicing and agency worker pay off your team."
+        },
+        "workwear": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The company is a recruitment agency placing HGV, skilled trade and office workers, so it does not employ site or customer-facing staff in uniform that the branded workwear and PPE would serve, and its own staff are not described as working on site.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The profile describes a recruitment agency placing HGV, skilled and office workers, with no car park, yard, company fleet or visitor premises mentioned, so it falls outside the EV charge point ideal customer.",
           "opener": null
         }
       }
@@ -231,6 +406,36 @@
           "band": "possible",
           "reason": "The company makes site boards, hoardings and vehicle graphics for businesses in the North East, which suggests some on-site work, but the profile does not state headcount or whether it employs a team.",
           "opener": "Ark Signs has been making site boards and hoardings in Cramlington since 1995. Our accredited manual handling and health and safety training could help your team stay safe when working on site."
+        },
+        "commercial_cleaning": {
+          "score": 45,
+          "band": "weak",
+          "reason": "Ark Signs makes signs, banners and digital printed signage in Cramlington, which implies a production workshop, a listed best-fit type, but the profile does not state its own premises or any customer or staff footfall that would need cleaning.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 35,
+          "band": "weak",
+          "reason": "Ark Signs is a B2B sign maker serving businesses across the North East, so it is a local firm but not a customer-facing business that would gain from being found by local consumers, which is our core fit.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 78,
+          "band": "possible",
+          "reason": "Ark Signs Ltd is a Cramlington sign maker serving B2B customers across the North East, a kind of making and installation work that implies staff and regular invoicing, though headcount and payroll needs are not stated.",
+          "opener": "Ark Signs has been making signs, banners and vehicle graphics for North East businesses since 1995. Our bookkeeping, payroll and year-end accounts service suits owner-managed firms that invoice regularly, so it could take the admin load off your team."
+        },
+        "workwear": {
+          "score": 58,
+          "band": "possible",
+          "reason": "Ark Signs is a North East sign maker that offers site boards, hoardings and vehicle graphics, which suggests some staff work on site, but the profile gives no headcount and does not mention uniforms or field crews.",
+          "opener": "Ark Signs has been making site boards and hoardings for businesses in Northumberland, Newcastle and Sunderland since 1995. Our branded workwear and PPE could suit staff who work on site."
+        },
+        "ev_charging": {
+          "score": 35,
+          "band": "weak",
+          "reason": "Ark Signs is a sign maker serving North East businesses, which is a partial match at best because the profile does not mention its own car park, yard, company vehicles or visitors, and its business is making signs rather than the premises-based sectors the team targets.",
+          "opener": null
         }
       }
     },
@@ -286,6 +491,36 @@
           "score": 8,
           "band": "not a fit",
           "reason": "ATUM VENTURES LTD is a custom software and consulting firm with no site-based or physical work, so it does not match the training firms the sales team targets in construction, engineering, maintenance, care or hospitality.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "ATUM VENTURES LTD is a custom software and consulting firm with no physical premises implied by its services, so it is not a business that staff or customers use day to day for cleaning.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "ATUM VENTURES LTD is a B2B custom software and consulting firm selling to other businesses, not a customer-facing local business such as a trade, salon, cafe, clinic or shop that wins work locally.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 55,
+          "band": "possible",
+          "reason": "ATUM VENTURES LTD is a Middlesbrough software consultancy serving UK SMEs, which resembles the agency category in the ideal customer profile, but the profile states no headcount, no invoicing model and no owner-managed structure.",
+          "opener": "Your team builds custom software, web applications and mobile apps for UK businesses. We provide bookkeeping, payroll and year-end accounts for small limited companies, which could take the back-office load off your books."
+        },
+        "workwear": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "ATUM VENTURES LTD is a custom software and consulting business with no site-based or customer-facing uniformed staff, so it does not match the workwear, uniform and PPE buyers described.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "ATUM VENTURES LTD is a custom software and consulting firm with no physical premises, car park, yard or vehicle fleet described in the profile, so it is not a match for EV charge point installation.",
           "opener": null
         }
       }
@@ -346,6 +581,36 @@
           "band": "possible",
           "reason": "The company runs two branches in Blyth and Bedlington offering MOT testing, servicing and tyre fitting through garages, which are physical workshop jobs that imply a staff team, though headcount is not stated and the core business is vehicle hire.",
           "opener": "Your Blyth and Bedlington branches offer tyre fitting, repairs and MOT testing, which involve physical garage work across both sites. Our accredited manual handling and first aid training could help your team stay safe while doing that work."
+        },
+        "commercial_cleaning": {
+          "score": 62,
+          "band": "possible",
+          "reason": "The company runs two branches in Blyth and Bedlington with customers and staff using the premises, plus MOT testing and car servicing that suggest a workshop, but its core business is self-drive hire and headcount is not stated.",
+          "opener": "Your Blyth and Bedlington branches run MOT testing and servicing, so staff and customers use the premises every day. Our commercial cleaning covers workshops, offices and customer areas, and we could keep both sites clean on a regular schedule."
+        },
+        "web_marketing": {
+          "score": 65,
+          "band": "possible",
+          "reason": "AVOR is a local, customer-facing business with two branches in Blyth and Bedlington serving private and business customers, which matches the local-customer focus, but vehicle hire is not one of the listed sectors and the profile does not mention its online presence.",
+          "opener": "AVOR has offered car and van hire in Blyth and Bedlington since 1978. We design websites and run local search and social media marketing, which could help local drivers find you when they need a van or an MOT."
+        },
+        "bookkeeping": {
+          "score": 45,
+          "band": "weak",
+          "reason": "AVOR is a vehicle hire business with two branches in Blyth and Bedlington and a garage-linked MOT, servicing and tyre offer, which implies staff and premises, but it sells largely to private individuals with cash-style hire rather than the regular invoicing typical of the ideal customer.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 55,
+          "band": "possible",
+          "reason": "The profile shows tyre fitting, MOT testing and car servicing at two branches in Blyth and Bedlington, which suggests technicians working on site, but it is mainly a self-drive hire business with no stated uniform or staff-facing requirements.",
+          "opener": "Your tyre fitting and MOT work at the Blyth and Bedlington branches involves technicians working on vehicles. Our branded workwear and PPE could kit out those mechanics and counter staff who deal with hire customers."
+        },
+        "ev_charging": {
+          "score": 92,
+          "band": "strong",
+          "reason": "A vehicle hire firm with two branches in Blyth and Bedlington, running a fleet of cars and vans and offering MOT, servicing and tyre work, which matches the ideal customer and implies premises with a yard and vehicle movements.",
+          "opener": "Your Blyth and Bedlington branches run a self-drive car and van fleet alongside MOT and servicing work, so vehicles are moving through your sites every day. We install electric vehicle charge points at business premises, and could help you offer charging to hire customers and visitors across both locations."
         }
       }
     },
@@ -407,6 +672,36 @@
           "band": "possible",
           "reason": "The practice has two branches, a recently expanded team and a current receptionist vacancy, and its cattle and equine work involves physical handling, but it is a veterinary practice rather than one of the listed best-fit sectors and the profile gives no staff numbers.",
           "opener": "Your team at both Askrigg and Leyburn branches is growing, with a receptionist vacancy open. Our accredited health and safety, first aid and manual handling courses could help your staff handle the physical demands of cattle and equine work safely."
+        },
+        "commercial_cleaning": {
+          "score": 82,
+          "band": "strong",
+          "reason": "The profile shows a veterinary practice with two branches in Askrigg and Leyburn that clients visit, a recently expanded team, and an advertised receptionist vacancy, all of which fit the premises-based businesses the sales team targets.",
+          "opener": "Your two branches in Askrigg and Leyburn see clients and animals arriving every day, and your team has recently grown. We provide commercial cleaning for clinics and offices, and could keep both sites presentable and hygienic between visits."
+        },
+        "web_marketing": {
+          "score": 78,
+          "band": "possible",
+          "reason": "A local veterinary practice with two branches in Askrigg and Leyburn serving farmers and pet owners in the Dales, a customer-facing business that wins work locally, though the profile does not say how it currently gets found online.",
+          "opener": "Your two branches in Askrigg and Leyburn serve farmers and pet owners across the Dales, and your team has recently grown. Local search and a clear website can help more of those nearby find your practice when they need care."
+        },
+        "bookkeeping": {
+          "score": 60,
+          "band": "possible",
+          "reason": "Two branches in Askrigg and Leyburn, a recently expanded team and a part-time receptionist vacancy suggest a small staffed business, but the profile does not show it is owner-managed or how often it invoices, and a veterinary practice is not one of the example sectors.",
+          "opener": "Bainbridge Vets runs two branches, in Askrigg and Leyburn, and is recruiting a part-time receptionist. We provide bookkeeping, payroll and year-end accounts for small limited companies, which could take that admin off your team as you grow."
+        },
+        "workwear": {
+          "score": 60,
+          "band": "possible",
+          "reason": "Bainbridge Vets provides cattle, equine and sheep veterinary care from two branches, so its vets likely work on farms and face customers, but the profile does not state staff numbers or any uniform requirement.",
+          "opener": "Bainbridge Vets runs two branches, in Askrigg and Leyburn, and is advertising a part-time receptionist vacancy. Our branded workwear and PPE could kit out your vets and reception staff who work with cattle, sheep and horses."
+        },
+        "ev_charging": {
+          "score": 35,
+          "band": "weak",
+          "reason": "A veterinary practice with two branches in Askrigg and Leyburn, which falls outside the listed best-fit sectors, and the profile does not mention a car park, yard, company vehicles or visitor parking.",
+          "opener": null
         }
       }
     },
@@ -467,6 +762,36 @@
           "band": "weak",
           "reason": "The company is a B2C dog day care and training business with two assistants plus the owners and its own centre on South Church Enterprise Park, so it has a small team and premises, but it sells to dog owners rather than employers and is outside the listed sectors.",
           "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 70,
+          "band": "possible",
+          "reason": "The company runs its own day care and training centre on South Church Enterprise Park with two assistants plus owners, so it has premises and staff, but as a B2C dog care business it is a less typical match for commercial cleaning than the cafes, clinics or offices the sales team targets.",
+          "opener": "Your day care and training centre on South Church Enterprise Park serves dog owners and a team of assistants from one premises. We provide commercial cleaning for busy customer-facing spaces, which could help keep your centre clean and presentable."
+        },
+        "web_marketing": {
+          "score": 78,
+          "band": "possible",
+          "reason": "Betty Kisses is a customer-facing B2C local business with a physical day care and training centre on South Church Enterprise Park, serving dog owners in Bishop Auckland, which matches the local customer-facing focus, though the profile does not say how it currently attracts customers or whether it already markets online.",
+          "opener": "Your day care and training centre on South Church Enterprise Park has grown from a home-based service since 2010, which suggests local customers already find you by word of mouth. We design websites and run local search and social media marketing, so we could help dog owners in Bishop Auckland find you online too."
+        },
+        "bookkeeping": {
+          "score": 45,
+          "band": "weak",
+          "reason": "The company is an owner-run dog care business with two assistants on a business park, which suits the small owner-managed profile, but it sells to consumers (B2C) rather than running regular business invoicing, so the match is partial.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 40,
+          "band": "weak",
+          "reason": "Betty Kisses is a B2C dog day care and training business with two assistants working from its own centre on South Church Enterprise Park, so staff do work on site, but it is not one of the trades or customer-facing sectors the team targets and the profile shows no sign of uniform or PPE needs.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 25,
+          "band": "weak",
+          "reason": "Betty Kisses is a B2C dog day care and training business whose customers are dog owners, with no garages, vehicle hire, hotels, retail or industrial premises, so it is a weak match for EV charge points despite having a site on an enterprise park.",
+          "opener": null
         }
       }
     },
@@ -524,6 +849,36 @@
           "band": "possible",
           "reason": "The company makes beef jerky and biltong at a production site near Eshott and runs a tea room, which implies a team doing physical and hospitality work, though headcount is not stated and food manufacturing is not one of the listed best-fit sectors.",
           "opener": "Your beef jerky and biltong are made at your site near Eshott. Our accredited first aid, manual handling and safety training could cover the production and tea room staff."
+        },
+        "commercial_cleaning": {
+          "score": 62,
+          "band": "possible",
+          "reason": "The company runs its own site near Eshott with a tea room and shop that customers use every day, and a food manufacturing operation that implies staff, but its core business is snack production and mail order rather than the cafes, clinics or offices in the ideal customer list, and no headcount is stated.",
+          "opener": "Your tea room and shop at the Eshott site give customers a daily reason to visit, and the premises need to look and feel clean throughout the day. We provide commercial cleaning for cafes and shops, including regular cleaning of customer areas and food preparation spaces."
+        },
+        "web_marketing": {
+          "score": 42,
+          "band": "weak",
+          "reason": "The company is a food manufacturer selling mainly by mail order and to walkers and campers, with only a small tea room and shop at its site, so it is a weak match for a local customer-facing business and its work is largely not local.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 74,
+          "band": "possible",
+          "reason": "A small owner-style food manufacturer making beef jerky and biltong, with a tea room, shop and mail order, so it likely has staff and regular invoicing, but no headcount or invoicing volume is stated.",
+          "opener": "Your beef jerky and biltong are made at your site near Eshott, with a tea room and shop alongside mail order. We handle bookkeeping, payroll and year-end accounts for small manufacturers and retailers, so your books could run alongside production and sales."
+        },
+        "workwear": {
+          "score": 65,
+          "band": "possible",
+          "reason": "The profile shows a food manufacturer making beef jerky and biltong at its site near Eshott, which implies production staff, and it also runs a tea room and shop where staff serve customers, though headcount and uniform use are not stated.",
+          "opener": "Your new tea room near Eshott has staff serving customers face to face at your site. We supply branded workwear and uniforms that help front-of-house and production teams look consistent."
+        },
+        "ev_charging": {
+          "score": 55,
+          "band": "possible",
+          "reason": "The company manufactures beef jerky and biltong at a site near Eshott and runs a tea room and shop there, which suggests visitors and premises, but the profile does not mention a car park, yard or company vehicles.",
+          "opener": "Your tea room and shop at the site near Eshott bring visitors to your premises. We install electric vehicle charge points at business premises, including retail sites and industrial units with their own car park."
         }
       }
     },
@@ -585,6 +940,36 @@
           "band": "strong",
           "reason": "A Newcastle building contractor offering roofing, joinery, brickwork, plumbing and masonry on site is physical work that implies a team of employees, matching the ideal customer, though the profile gives no headcount.",
           "opener": "Your recent new build and the roofing, joinery and brickwork you list suggest a busy site-based team across the North East. Our accredited health and safety, first aid and manual handling training could help keep those crews compliant and safe."
+        },
+        "commercial_cleaning": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The company is a residential building contractor selling B2C to homeowners, with no commercial premises that staff or customers use every day, so it is a poor match for commercial cleaning.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 78,
+          "band": "possible",
+          "reason": "A Newcastle-based B2C building contractor serving local homeowners in Newcastle, Darras Hall, Stocksfield and Ponteland, fitting the trades profile, though the website shows no evidence of current online marketing and staff size is not stated.",
+          "opener": "Your recent projects and the Just completed new build on your site show steady local work across Newcastle, Darras Hall and Ponteland. We design websites and run local search marketing that helps trades like yours get found by homeowners searching nearby."
+        },
+        "bookkeeping": {
+          "score": 82,
+          "band": "strong",
+          "reason": "A Newcastle residential building contractor offering roofing, joinery, brickwork, plumbing and loft conversions, which is trade work that implies employees and invoicing, fitting the owner-managed trades the team targets, though the profile gives no headcount and it sells B2C.",
+          "opener": "Your recent completed projects and loft conversion and extension work across Newcastle and Ponteland suggest a busy build schedule with regular invoicing. We provide bookkeeping, payroll and year-end accounts for small limited companies like yours, so job invoices and staff pay can be handled in one place."
+        },
+        "workwear": {
+          "score": 80,
+          "band": "strong",
+          "reason": "A Newcastle building contractor offering roofing, joinery, brickwork and plumbing on site implies a field workforce that fits the ideal customer of builders and engineers in workwear and PPE, though headcount is not stated.",
+          "opener": "Your team delivers roofing, joinery and brickwork across the North East, and that kind of on-site work usually means crews needing durable branded workwear. We supply uniforms and PPE for builders and trade firms, and could help keep your crews looking consistent on every job."
+        },
+        "ev_charging": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The company is a residential building contractor selling B2C to homeowners with no car park, yard, company vehicle fleet or business premises mentioned, so it falls outside the ideal customer profile.",
+          "opener": null
         }
       }
     },
@@ -644,6 +1029,36 @@
           "score": 45,
           "band": "weak",
           "reason": "A cafe and coffee roaster with a small local team, but its customers are mainly walk-in cafe visitors and online coffee buyers rather than site-based or physical-work employers, so it is only a partial match for accredited health and safety, first aid and manual handling training.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 85,
+          "band": "strong",
+          "reason": "The company runs its own North Shields cafe that customers use every day, matching the ideal customer, and it has a small number of local employees, though staff numbers are not stated precisely.",
+          "opener": "Your North Shields cafe serves breakfast, drinks and sandwiches to local customers every day, so it has a busy front of house to keep clean. We provide commercial cleaning for cafes and hospitality venues, and could take that routine off your hands."
+        },
+        "web_marketing": {
+          "score": 88,
+          "band": "strong",
+          "reason": "A customer-facing North Shields cafe that wins local trade and sells coffee bags online and by home delivery, so it fits the ideal customer closely, though the profile gives no website or search activity details.",
+          "opener": "Your North Shields cafe serves breakfast, bakery items and sandwiches, and you also deliver roasted coffee bags to homes. We design websites and run local search and social media marketing that help small cafes like yours get found by nearby customers and online buyers."
+        },
+        "bookkeeping": {
+          "score": 72,
+          "band": "possible",
+          "reason": "Owner-run cafe and coffee roaster in North Shields with a small number of local employees, a retail cafe and online and wholesale sales that imply regular invoicing, though the profile gives no headcount or accounts detail.",
+          "opener": "Cafe La Verne has run its North Shields cafe and home coffee delivery since 2019, selling roasted blends in bags and to wholesale customers. We provide bookkeeping, payroll and year-end accounts for small owner-managed limited companies that handle regular invoicing like yours."
+        },
+        "workwear": {
+          "score": 62,
+          "band": "possible",
+          "reason": "A North Shields cafe with a small team of local employees that serves customers in person is a plausible match for uniform and workwear, though the profile does not say whether staff wear uniforms or how many there are.",
+          "opener": "Your North Shields cafe serves breakfast, drinks and sandwiches to local customers, and a small team works front of house every day. We supply branded aprons, polo shirts and workwear that help a café team look consistent while keeping staff clean and protected."
+        },
+        "ev_charging": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "A small North Shields cafe and coffee roaster serving walk-in and home-delivery customers, with no stated car park, yard, company vehicle fleet or visitor base that fits the charge point ideal customer.",
           "opener": null
         }
       }
@@ -706,6 +1121,36 @@
           "band": "possible",
           "reason": "The 30,000 sq ft South Shields warehouse, stock of over 1000 product lines and delivery of about 85% of products in their own vehicles point to a physical operation with employees, but the profile gives no headcount and the company is a supplier rather than one of the named target sectors.",
           "opener": "Your 30,000 sq ft South Shields warehouse and own-vehicle deliveries suggest a team regularly lifting heavy cast iron and stone. We provide accredited manual handling and first aid training for employers with warehouse and delivery staff."
+        },
+        "commercial_cleaning": {
+          "score": 35,
+          "band": "weak",
+          "reason": "CAST TEC is a B2B fireplace supplier selling mainly to independent retailers, and its 30,000 sq ft South Shields warehouse is premises with staff, but it has no customer-facing venue or clear daily public use, so it is only a partial match for commercial cleaning.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The company is a B2B supplier of cast iron fireplaces and stoves sold through independent retailers across the UK, rather than a customer-facing local business that wins work nearby, which points away from the ideal customer.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 78,
+          "band": "possible",
+          "reason": "CAST TEC is a B2B supplier with a 30,000 sq ft warehouse, over 1,000 product lines and its own delivery vehicles, all pointing to an owner-managed trading business with regular invoicing, though the profile does not state staff numbers or confirm it is owner-managed.",
+          "opener": "Your South Shields warehouse holds over 1,000 product lines, and around 85% of orders go out in your own vehicles. Our bookkeeping, payroll and year-end accounts service suits growing stockists with that much invoicing and delivery activity."
+        },
+        "workwear": {
+          "score": 55,
+          "band": "possible",
+          "reason": "The 30,000 sq ft South Shields warehouse and own delivery vehicles suggest staff handling stock and deliveries, but the company sells mainly to independent retailers and the profile mentions no uniformed or customer-facing staff.",
+          "opener": "Your 30,000 sq ft South Shields warehouse and own delivery vehicles suggest a team handling stock daily. We supply branded workwear and PPE for warehouse and delivery staff, which may suit your team."
+        },
+        "ev_charging": {
+          "score": 70,
+          "band": "possible",
+          "reason": "The company runs a 30,000 sq ft warehouse in South Shields and delivers around 85% of its products in its own vehicles, which matches the company-vehicles and industrial-unit profile, but the profile does not mention a car park or yard.",
+          "opener": "Your 30,000 sq ft warehouse in South Shields handles deliveries, with around 85% of products sent in your own vehicles. We install electric vehicle charge points at business premises, which could keep your delivery fleet charged on site."
         }
       }
     },
@@ -766,6 +1211,36 @@
           "band": "strong",
           "reason": "A Sunderland construction and refurbishment contractor installing fire doors, fire stopping and doing external works is site-based physical work that implies a team of employees, matching the ideal customer in construction.",
           "opener": "Your work installing fire doors and fire stopping on construction and refurbishment projects across the UK means your site teams face manual handling and first aid risks daily. Our accredited health, safety, first aid and manual handling courses could help keep those teams compliant and protected."
+        },
+        "commercial_cleaning": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The company is a construction and refurbishment contractor that sells fire doors, fire stopping and external works to local authorities and housing associations, so it does not run its own customer-facing premises that need routine commercial cleaning.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 25,
+          "band": "weak",
+          "reason": "A B2B construction and refurbishment contractor selling to local authorities, housing associations and other institutions, which is not the customer-facing local business the sales team targets, though its Sunderland base gives a small local angle.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 72,
+          "band": "possible",
+          "reason": "A Sunderland construction and refurbishment contractor with case study projects of £800k, £128k and £2m and a history as a family-run firm suggests a small owner-managed business with regular invoicing, though the profile does not state headcount or invoicing frequency.",
+          "opener": "Your case studies cover fire door and refurbishment projects worth up to £2m, and your business grew from a family-run firm into a nationwide provider. Our bookkeeping, payroll and year-end accounts service could take the admin load off your team as project invoicing grows."
+        },
+        "workwear": {
+          "score": 88,
+          "band": "strong",
+          "reason": "A construction and refurbishment contractor doing fire door installation, fire stopping and external works means its site crews clearly work on site, which matches the ideal customer, though the profile gives no headcount.",
+          "opener": "Your work on fire door installation and fire stopping for local authorities and housing associations involves crews on site every day. Our branded workwear, uniforms and PPE could equip those teams with compliant, hard-wearing kit that carries your company branding."
+        },
+        "ev_charging": {
+          "score": 30,
+          "band": "weak",
+          "reason": "The profile describes a construction and refurbishment contractor selling fire doors and external works to local authorities, healthcare and housing, with no mention of its own car park, yard, fleet or visitor traffic, so it is only a partial match for EV charge point installation at business premises.",
+          "opener": null
         }
       }
     },
@@ -828,6 +1303,36 @@
           "band": "weak",
           "reason": "A private hire taxi and chauffeur business whose work is booking-led driving rather than site-based or physical work, so it is a weak match for accredited health, safety, first aid and manual handling training, though it may employ drivers.",
           "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 20,
+          "band": "weak",
+          "reason": "City Wheels runs a vehicle-based private hire and chauffeur business with no stated premises that staff or customers use daily, so it is a weak match for commercial cleaning of its own sites despite being based in Newcastle Upon Tyne.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 40,
+          "band": "weak",
+          "reason": "The company is a customer-facing Newcastle private hire business, but it sells pre-booked taxis, airport transfers and chauffeur travel across the United Kingdom, including to corporate clients, so it does not clearly win work locally as the ideal customer does.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 62,
+          "band": "possible",
+          "reason": "A Newcastle-based private hire and chauffeur operator that offers business accounts and invites people to become drivers, which points to regular invoicing and staff, but the profile does not state headcount or billing details.",
+          "opener": "Your site offers business accounts for corporate clients, which suggests regular invoicing alongside a driver network. We provide bookkeeping, payroll and year-end accounts for small limited companies, so we could take the invoicing and payroll off your desk."
+        },
+        "workwear": {
+          "score": 45,
+          "band": "weak",
+          "reason": "Private hire taxi and chauffeur firm whose drivers work alone in vehicles rather than on site or in uniform, a weak match for branded workwear, though the business accounts and driver recruitment give some scope.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 25,
+          "band": "weak",
+          "reason": "City Wheels runs a private hire taxi and chauffeur service that operates from Newcastle and travels across the UK, with no mention of its own car park, yard, company vehicles used on site, or premises such as garages, hotels or industrial units, so it only partly matches the ideal customer.",
+          "opener": null
         }
       }
     },
@@ -887,6 +1392,36 @@
           "band": "possible",
           "reason": "They are a site-based spray painting contractor with physical work, which suggests employees, but they sell mainly to homeowners (B2C) rather than the employer-based firms the ideal customer describes, and headcount is not stated.",
           "opener": "Your on-site spraying work for kitchen cabinets and uPVC windows across the North East is a clear practical trade. Our accredited health and safety, first aid and manual handling training could help your team stay safe on site."
+        },
+        "commercial_cleaning": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is a B2C spray painting contractor serving homeowners with no premises that staff or customers use daily, which points away from the commercial cleaning ideal customer.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 88,
+          "band": "strong",
+          "reason": "A B2C trade contractor serving homeowners across Washington, Newcastle, Gateshead, Sunderland and Durham, with around 150 Google reviews, matching the local customer-facing trade the sales team targets, though the site does not state staff numbers.",
+          "opener": "Your site shows you spray paint kitchens, uPVC windows and doors on site across Newcastle, Gateshead, Sunderland and Durham, and around 150 Google reviews suggests steady local demand. We design websites and run local search and social media marketing that help trades like yours get found by homeowners searching nearby."
+        },
+        "bookkeeping": {
+          "score": 45,
+          "band": "weak",
+          "reason": "The company is a limited company doing on-site spray work with regular jobs, but its market is B2C homeowners rather than the trades and small businesses with regular invoicing the sales team targets, and the profile gives no headcount or invoicing detail.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 72,
+          "band": "possible",
+          "reason": "The company is a spray painting contractor that works on site at customers' homes, so its staff are likely field workers, but it sells B2C to homeowners rather than to businesses with staff in uniform, and the profile gives no headcount.",
+          "opener": "Your team spray paints kitchen cabinets and uPVC windows on site across the North East, so staff are working in customers' homes every day. Our branded workwear and PPE could keep your fitters looking professional and protected on every job."
+        },
+        "ev_charging": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The company is a B2C spray painting contractor serving homeowners across the North East, with no sign of its own car park, company vehicle fleet or visitor traffic that an EV charge point would serve, so it is a poor match for a business-premises charging installer.",
+          "opener": null
         }
       }
     },
@@ -941,6 +1476,36 @@
           "band": "possible",
           "reason": "The company is a dancewear manufacturer in South Shields, which implies physical production work and employees, but the profile states no headcount and the market is unclear.",
           "opener": "Dainty Dance manufactures custom dancewear, uniforms and costumes from South Shields. Our accredited health and safety, first aid and manual handling training could help a manufacturing team there work safely day to day."
+        },
+        "commercial_cleaning": {
+          "score": 55,
+          "band": "possible",
+          "reason": "Dainty Dance is a South Shields dancewear manufacturer, which suggests a workshop with staff, a listed best-fit type, but the profile does not describe its premises, headcount or customer base.",
+          "opener": "Dainty Dance makes custom dancewear, uniforms and costumes from South Shields. We clean commercial workshops and offices, so we could help keep your production space clean."
+        },
+        "web_marketing": {
+          "score": 35,
+          "band": "weak",
+          "reason": "Dainty Dance is a South Shields dancewear manufacturer selling custom products to dancers and dance groups, which is a partial match because it is not a local trade, salon, cafe, clinic or independent shop, and the profile says its market is unclear and gives no size signals.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 62,
+          "band": "possible",
+          "reason": "Dainty Dance is a custom dancewear manufacturer in South Shields, which implies production staff and made-to-order invoicing, but the profile gives no size, customer detail or evidence of owner-management.",
+          "opener": "Custom dancewear, uniforms and costumes are made for dancers and dance groups. Our bookkeeping, payroll and year-end accounts service suits owner-managed manufacturers with a few employees and regular invoicing."
+        },
+        "workwear": {
+          "score": 25,
+          "band": "weak",
+          "reason": "Dainty Dance is a South Shields dancewear manufacturer that sells custom dance uniforms and costumes to dancers and dance groups, so it makes uniforms rather than needing them for staff on site or facing customers, and the profile says nothing about workplace uniforms or PPE.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "Dainty Dance makes custom dancewear and costumes for dancers, with no mention of a car park, yard, company vehicles or business premises that would need charge points, so it falls outside the ideal customer.",
+          "opener": null
         }
       }
     },
@@ -1001,6 +1566,36 @@
           "band": "possible",
           "reason": "The company is an engineering consultancy with installation quality control, pool tanks and movable structures, and engineers needing two years of training, which implies site-based technical work and staff, but the profile does not state headcount and the core service is design consultancy rather than hands-on site work.",
           "opener": "Your team has completed over 600 pool and spa projects, from design through to installation quality control. Our accredited manual handling and health and safety training could help engineers working with pool tanks and movable structures stay compliant."
+        },
+        "commercial_cleaning": {
+          "score": 30,
+          "band": "weak",
+          "reason": "Devin Consulting is a B2B pool and spa engineering consultancy with engineers and over 600 projects, so it may have an office team, but the profile does not mention its own premises used daily by staff or customers, which is the core of the ideal customer.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "Devin Consulting is a B2B pool and spa engineering consultancy selling to hotels, leisure centres and developers, which sits well outside the customer-facing local businesses such as trades, salons and cafes that the sales team targets.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 45,
+          "band": "weak",
+          "reason": "A UK consultancy for pool and spa engineering with a B2B client base and a stated track record of over 600 projects, but it is a consultancy rather than a trade or manufacturer, and its profile gives no staffing or invoicing details beyond 'engineers with over 100 years of combined experience'.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 62,
+          "band": "possible",
+          "reason": "A pool and spa engineering consultancy whose engineers work on installation quality control at client sites, so staff plausibly need site workwear and PPE, but the profile does not state headcount or mention uniforms or site-based field staff explicitly.",
+          "opener": "Your team has completed over 600 pool and spa projects across London and Northumberland, which suggests regular site visits for installation quality control. We supply branded workwear, uniforms and PPE for engineers and site teams, and could outfit your engineers for that work."
+        },
+        "ev_charging": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "Devin Consulting is a pool and spa engineering consultancy that designs and quality-checks pool projects, with no car park, yard, company fleet or visitor vehicles implied, so it is not a sensible prospect for EV charge points at its own premises.",
+          "opener": null
         }
       }
     },
@@ -1059,6 +1654,36 @@
           "band": "possible",
           "reason": "The company runs three physical fish and chip shops in Throckley, Hebburn and Prudhoe, which implies a staffed premises-based food service team, a sector the sales team lists as a best fit, though the profile does not state headcount.",
           "opener": "Your three fish and chip shops in Throckley, Hebburn and Prudhoe offer both collection and delivery. Our accredited first aid, manual handling and health and safety training could help keep staff at all three sites trained."
+        },
+        "commercial_cleaning": {
+          "score": 78,
+          "band": "possible",
+          "reason": "The company runs three takeaway shop premises in Throckley, Hebburn and Prudhoe that customers use every day, which matches the ideal customer, though it is a fish and chip takeaway rather than a cafe or pub and no staff numbers are stated.",
+          "opener": "Your three fish and chip shops in Throckley, Hebburn and Prudhoe serve customers from their premises every day. We provide commercial cleaning for food premises like yours, keeping customer-facing areas and workspaces clean and presentable."
+        },
+        "web_marketing": {
+          "score": 85,
+          "band": "strong",
+          "reason": "A customer-facing local takeaway with three shops in Throckley, Hebburn and Prudhoe, serving local families and offering online ordering, so it matches the ideal customer well.",
+          "opener": "Your three shops in Throckley, Hebburn and Prudhoe have built up over 25 years of serving local families. We design websites and run local search and social media marketing that help takeaways like yours get found by nearby customers."
+        },
+        "bookkeeping": {
+          "score": 62,
+          "band": "possible",
+          "reason": "A limited company with three owned shops (Throckley, Hebburn and Prudhoe) and 25 years trading suggests staff and regular cash takings, but it sells B2C takeaway food, not invoiced trade work, and headcount is not stated.",
+          "opener": "Your three takeaway shops in Throckley, Hebburn and Prudhoe must keep a lot of daily takings and staff rotas in order. We handle bookkeeping, payroll and year-end accounts for small limited companies like yours, so you can keep the shops running."
+        },
+        "workwear": {
+          "score": 60,
+          "band": "possible",
+          "reason": "The company is a takeaway fish and chip business with three store locations in Throckley, Hebburn and Prudhoe, which is hospitality with staff serving customers face to face, but the profile does not mention uniforms or staff numbers.",
+          "opener": "Your three takeaway shops in Throckley, Hebburn and Prudhoe serve families across the Newcastle area. We supply branded workwear and uniforms for hospitality teams that serve customers face to face, which could suit your counter staff."
+        },
+        "ev_charging": {
+          "score": 25,
+          "band": "weak",
+          "reason": "A takeaway fish and chip shop selling B2C to local families, with no stated car park, yard, company vehicles or business premises, so it sits outside the garage, hire, hotel, retail or industrial profile we serve.",
+          "opener": null
         }
       }
     },
@@ -1117,6 +1742,36 @@
           "band": "not a fit",
           "reason": "The company is a digital marketing agency with no site-based or physical work, and its profile shows no evidence of an operational workforce that would need accredited health and safety, first aid or manual handling training, so it points away from the ideal customer.",
           "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is a digital marketing agency that sells online services rather than operating its own premises for staff or customers, so it is a poor match for commercial cleaning.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 10,
+          "band": "not a fit",
+          "reason": "The company is itself a digital marketing agency selling local SEO, Google Ads, websites and social media advertising, so it competes with the sales team's offer rather than buying it, and it is B2B with no customer-facing local business model.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 72,
+          "band": "possible",
+          "reason": "The company is a Newcastle digital marketing agency with 10+ years of industry experience and 150+ businesses scaled, which matches the agency segment in our best-fit list, though the profile gives no headcount or invoicing detail.",
+          "opener": "Your agency has worked with more than 150 businesses over ten years of digital marketing in Newcastle. Our bookkeeping, payroll and year-end accounts service is built for owner-managed agencies that invoice clients regularly."
+        },
+        "workwear": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is a digital marketing agency selling online services to trades and professional firms, with no staff working on site or facing customers in uniform, so it is not a workwear buyer.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is a digital marketing agency that sells online services and has no car park, yard, fleet or premises needs stated in the profile, so it is a poor match for EV charge point installation.",
+          "opener": null
         }
       }
     },
@@ -1174,6 +1829,36 @@
           "band": "possible",
           "reason": "The company installs and repairs double glazing, conservatories and doors across County Durham, which is site-based physical work that implies a team of fitters, although headcount is not stated.",
           "opener": "Your firm installs and repairs double glazing and doors across County Durham for home and commercial owners. Our accredited manual handling and health and safety training suits crews doing that heavy site work."
+        },
+        "commercial_cleaning": {
+          "score": 35,
+          "band": "weak",
+          "reason": "Durham Window and Door Centre is a double glazing installer serving mainly homeowners and commercial property owners, and the profile does not mention its own staffed premises or public-facing site that would need regular commercial cleaning, so it is only a partial match.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 82,
+          "band": "strong",
+          "reason": "The company is a Durham double glazing installer selling to homeowners and commercial property owners in County Durham, a customer-facing local trade that wins work from local customers and would benefit from online visibility.",
+          "opener": "Your Durham business has been installing double glazing, UPVC and composite doors since 1990, so local homeowners are likely searching for you online. We help small local trades like yours get found through a website and local search."
+        },
+        "bookkeeping": {
+          "score": 78,
+          "band": "possible",
+          "reason": "A Durham double glazing installer selling and repairing windows, doors and conservatories to homeowners and commercial owners implies a small installation workforce and regular invoicing, though headcount and invoicing frequency are not stated.",
+          "opener": "Your Durham firm has been installing and repairing double glazing, doors and conservatories since 1990. We help small limited companies like yours with bookkeeping, payroll and year-end accounts, so your invoicing and staff pay stay in order."
+        },
+        "workwear": {
+          "score": 82,
+          "band": "strong",
+          "reason": "The company installs and repairs double glazing, windows, doors and conservatories on domestic and commercial properties in County Durham, so its installers work on site and would plausibly wear branded uniforms and PPE, though the profile gives no headcount.",
+          "opener": "Your team installs and repairs windows, doors and conservatories across County Durham, both at homes and commercial properties. We supply branded workwear, uniforms and PPE for site teams like yours, and could outfit installers and repair crews."
+        },
+        "ev_charging": {
+          "score": 25,
+          "band": "weak",
+          "reason": "The company is a double glazing installer serving mainly homeowners and, as a secondary market, commercial property owners in County Durham, with no mention of a car park, yard, company vehicles or visitor-heavy premises that the charge point offer targets.",
+          "opener": null
         }
       }
     },
@@ -1235,6 +1920,36 @@
           "band": "strong",
           "reason": "Emperor Roofing NE is a roofing contractor doing physical site work with £10m employers' liability insurance and a described family-run team, which strongly matches the construction-sector ideal customer.",
           "opener": "Your £10m employers' liability cover and roofing work across the North East suggest a crew working on sites every day. Our accredited health and safety, first aid and manual handling training could help keep that team certified and protected on site."
+        },
+        "commercial_cleaning": {
+          "score": 22,
+          "band": "weak",
+          "reason": "Emperor Roofing NE is a roofing contractor that sells roofing work to homeowners, landlords and businesses and does not run premises that staff or customers use daily, so it is a weak match for commercial cleaning despite its commercial roofing service.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 85,
+          "band": "strong",
+          "reason": "A local, customer-facing roofing contractor serving homeowners, landlords and businesses across the North East, which matches the ideal customer of trades that win work locally and would gain from being found online.",
+          "opener": "Your family-run roofing firm covers new roofs, repairs and flat roofing across the North East, with work for homeowners, landlords and businesses. We help local trades like yours get found online by people searching for a roofer nearby."
+        },
+        "bookkeeping": {
+          "score": 80,
+          "band": "strong",
+          "reason": "A family-run roofing contractor doing installation and repairs across the North East, with trade work and commercial roofing that implies regular invoicing and employees, though headcount is not stated and it is a newly established company.",
+          "opener": "Your team covers new roofs, repairs and commercial roofing across the North East, which usually means steady invoicing across many jobs. We provide bookkeeping, payroll and year-end accounts for small limited companies like yours, so your books stay current without taking time away from site work."
+        },
+        "workwear": {
+          "score": 88,
+          "band": "strong",
+          "reason": "A roofing contractor doing installation and repairs across the North East clearly has site-based staff who would wear workwear and PPE, matching the ideal customer, though headcount is not stated.",
+          "opener": "Emperor Roofing NE works on new roofs, repairs and commercial roofing across the North East, so your crews are on site in all weather. We supply branded workwear and PPE built for that kind of work, and could outfit your team in matching uniforms."
+        },
+        "ev_charging": {
+          "score": 35,
+          "band": "weak",
+          "reason": "A roofing contractor serving homeowners, landlords and businesses across the North East, with the profile showing no car park, yard, fleet or visitor premises, so it is only a partial match for an EV charge point installer.",
+          "opener": null
         }
       }
     },
@@ -1288,6 +2003,36 @@
           "score": 15,
           "band": "not a fit",
           "reason": "The company is an energy consultancy selling desk-based tracking, procurement and carbon management services to larger businesses, with no site-based or physical work and no stated employees, so it is a weak match for accredited health, safety and manual handling training.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is an energy consultancy selling software and advisory services to larger businesses, with no premises or on-site staff implied by the profile, so it is not a sensible match for commercial cleaning.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "The company is a B2B energy consultancy that sells to larger businesses spending over £500k a year on utilities, which is not the customer-facing local trade, salon, cafe, clinic or shop market this team serves.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The company is an energy consultancy that sells to larger businesses spending over £500k a year on utilities, which points away from the owner-managed trades, manufacturers, agencies and retailers with a few employees that the sales team targets.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The profile describes a B2B energy consultancy offering tracking, procurement and carbon management software and advice to larger businesses, with no sign of field staff or customer-facing uniformed roles, so it falls outside the ideal customer.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is an energy consultancy selling tracking and procurement services to larger businesses spending over £500k a year on utilities, with no premises, car park, fleet or visitor need evident from the profile, so it is a poor match for EV charge point installation.",
           "opener": null
         }
       }
@@ -1346,6 +2091,36 @@
           "band": "strong",
           "reason": "G-Storm is a Hartlepool scaffolding contractor erecting scaffolding and access solutions on site for commercial, industrial and public sector clients, which is physical site-based work that clearly implies a team of employees, though headcount is not stated.",
           "opener": "Your team erects scaffolding and access solutions across the North East and North Yorkshire, much of it on live commercial and public sector sites. We provide accredited health and safety, first aid and manual handling training to help crews work safely at height and when handling materials."
+        },
+        "commercial_cleaning": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "G-Storm is a scaffolding contractor that erects access structures for clients rather than running its own premises that staff or customers use daily, so it does not match the cleaning service's best-fit businesses such as cafes, clinics, gyms or offices with a team.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 35,
+          "band": "weak",
+          "reason": "G-Storm is a Hartlepool scaffolding contractor serving domestic, commercial, industrial and public sector clients across the North East and North Yorkshire, so it is local but sells mainly to businesses and public bodies rather than the customer-facing walk-in trade the sales team targets, and its work is project-based.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 72,
+          "band": "possible",
+          "reason": "A Hartlepool scaffolding contractor doing physical erection work for trade and commercial clients implies a small team with regular invoicing, though the profile states no headcount and no invoicing detail.",
+          "opener": "Your team mobilises scaffolding across the North East and North Yorkshire, which usually means a lot of jobs being invoiced across different sites. We provide bookkeeping, payroll and year-end accounts for owner-managed trade firms like yours, so that paperwork can be handled without pulling you off site."
+        },
+        "workwear": {
+          "score": 85,
+          "band": "strong",
+          "reason": "G-Storm is a Hartlepool scaffolding contractor whose staff erect scaffolding and edge protection on site for domestic, commercial and public sector projects, which matches the on-site work the sales team targets even though headcount is not stated.",
+          "opener": "Your team erects scaffolding and edge protection on domestic, commercial and public sector sites across the North East and North Yorkshire. Our branded workwear, uniforms and PPE are built for crews who work on site every day, and we could help equip yours."
+        },
+        "ev_charging": {
+          "score": 35,
+          "band": "weak",
+          "reason": "G-Storm is a scaffolding contractor in Hartlepool with a modern fleet, but the profile shows no company vehicles, car park, yard or premises-based visitor traffic, so the link to EV charge points is weak.",
+          "opener": null
         }
       }
     },
@@ -1402,6 +2177,36 @@
           "score": 25,
           "band": "weak",
           "reason": "The company is a B2C funeral director serving local families in Redcar, with no site-based or industrial work and only an owner's service history given as a size signal, so it is a weak match for a team-based health and safety, first aid and manual handling training offer.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 25,
+          "band": "weak",
+          "reason": "Greeves & Sons is a B2C funeral director serving local families in Redcar, and the profile does not mention a premises used daily by staff or customers, so it is only a partial match for our ideal customers.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 65,
+          "band": "possible",
+          "reason": "Greeves & Sons is a local, customer-facing funeral director serving Redcar families, so it wins work locally and could gain from being found online, but funeral directing is not one of the listed trade types and the profile says nothing about how it currently attracts customers.",
+          "opener": "Greeves & Sons serves local families across Redcar with funeral arrangements, cremation and burial services. Our website design and local search work could help more families in the area find you when they need support."
+        },
+        "bookkeeping": {
+          "score": 35,
+          "band": "weak",
+          "reason": "A funeral director serving local families is a B2C business with no stated staff numbers or invoicing to businesses, so it only partly matches the owner-managed trades and retailers the sales team targets.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 30,
+          "band": "weak",
+          "reason": "A funeral director serving local families in Redcar, with no sign of staff working on site or in uniform, is a weak match for branded workwear, uniforms and PPE, though a funeral team might wear dress or PPE for embalming.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "A funeral director serving local families in Redcar on a B2C basis, with no stated car park, yard, company vehicle fleet of its own for trade use, or visitor premises that match the best-fit profile of garages, vehicle hire, hotels, retail or industrial units.",
           "opener": null
         }
       }
@@ -1464,6 +2269,36 @@
           "band": "not a fit",
           "reason": "The profile describes an investment holding group with no stated customers, no site-based or physical workforce signals, and an unclear market, so it is a poor match for health and safety, first aid and manual handling training.",
           "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The profile describes an investment holding group with no stated customers or premises that staff or customers use daily, so it is not a sensible prospect for commercial cleaning.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The profile describes an investment holding group with a portfolio of consumer product businesses and does not say who its customers are, so it is not a local customer-facing business that would gain from local search or social media marketing.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 25,
+          "band": "weak",
+          "reason": "Ground Six is an investment and management group that holds a portfolio of consumer product businesses, which is a weak match for an owner-managed small firm with employees and regular invoicing, and the profile gives no staff count or customer type.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The profile describes an investment holding group that invests in consumer product businesses, with no sign its own staff work on site or in uniform, and the site does not say who its customers are.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 10,
+          "band": "not a fit",
+          "reason": "The profile describes an investment holding group with no physical premises, yard, or company vehicles mentioned, and its customers are unclear, so it is a poor match for EV charge point installation.",
+          "opener": null
         }
       }
     },
@@ -1524,6 +2359,36 @@
           "band": "possible",
           "reason": "The profile shows a plumbing merchant with a Hartlepool showroom, local collection and a range of pipe, radiator and tool stock, which implies staff handling physical goods, but it does not state a workforce size and sells mainly to trade and retail customers rather than doing site-based work itself.",
           "opener": "Your Hartlepool showroom and local collection service involve handling a wide range of pipe, radiator and heating stock. Our accredited manual handling and first aid training is designed for employers with physical work and a team of staff."
+        },
+        "commercial_cleaning": {
+          "score": 60,
+          "band": "possible",
+          "reason": "The company runs a Hartlepool showroom and local collection point that customers visit, which resembles the shops we clean, but it is a plumbing merchant selling mainly to trade and DIY customers rather than one of the listed business types, and staff numbers are not stated.",
+          "opener": "Your Hartlepool showroom serves customers in person alongside your local collection service. We provide commercial cleaning for shops and showrooms, and could keep your customer areas clean on a regular schedule."
+        },
+        "web_marketing": {
+          "score": 72,
+          "band": "possible",
+          "reason": "A local Hartlepool merchant with a showroom and local collection that serves homeowners and DIY customers as well as trade, so it wins work locally and could gain from being found online, though the profile gives no headcount and it sells mainly through a trade merchant rather than direct services.",
+          "opener": "Your Hartlepool showroom and local collection service stand out for customers across the North East who want bathroom and heating products nearby. We design websites and run local search and social media marketing that help businesses like yours get found by homeowners and DIY customers searching in their area."
+        },
+        "bookkeeping": {
+          "score": 78,
+          "band": "possible",
+          "reason": "A Hartlepool plumbing merchant with a showroom, local collection and trade customers suggests an owner-managed business with staff and regular invoicing, though the profile gives no headcount and does not confirm it is owner-managed.",
+          "opener": "Your Hartlepool showroom and trade counter serve plumbers, installers and homeowners across the North East, which means a steady flow of invoices to keep on top of. We handle bookkeeping, payroll and year-end accounts for small limited companies like yours, so the back office can run without taking time away from the shop floor."
+        },
+        "workwear": {
+          "score": 30,
+          "band": "weak",
+          "reason": "The profile describes a plumbing merchant with a showroom that sells tools, workwear and PPE itself, so it is a supplier rather than a business whose staff work on site or face customers in uniform, and no staff uniform need is stated.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 35,
+          "band": "weak",
+          "reason": "A plumbing merchant with a Hartlepool showroom and local collection, which may have a car park, but the profile shows no company vehicles, visitor-heavy operation or industrial yard, so it only partly matches the ideal customer.",
+          "opener": null
         }
       }
     },
@@ -1578,6 +2443,36 @@
           "score": 28,
           "band": "weak",
           "reason": "Impack Branding is a branding and promotional products supplier, which is outside the construction, engineering, maintenance, care and hospitality sectors the team targets, though its embroidery and printing work implies some physical production staff.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 55,
+          "band": "possible",
+          "reason": "Impack Branding is a B2B branding supplier in Tyne and Wear whose embroidery and printing services imply a workplace with staff, but the profile does not show the kind of venue our best-fit list describes and gives no size signals.",
+          "opener": "Impack Branding lists embroidery and printing among its services. We provide commercial cleaning for workshops and offices, which could suit a site where your team works every day."
+        },
+        "web_marketing": {
+          "score": 35,
+          "band": "weak",
+          "reason": "Impack Branding is a B2B supplier of personalised apparel, promotional products and stationery to clubs, companies and organisations, not a customer-facing local business such as a trade, salon, cafe or shop, so it is only a partial match despite being based in Tyne and Wear.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 60,
+          "band": "possible",
+          "reason": "The profile shows a B2B branding supplier offering embroidery and printing, which implies premises and staff, but it states no size, growth or invoicing details, so the fit is plausible rather than clear.",
+          "opener": "Your embroidery and printing services serve clubs, companies and organisations across the UK. We handle bookkeeping, payroll and year-end accounts for small limited companies, so your back office can run alongside your production work."
+        },
+        "workwear": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The profile describes a branding and promotional products supplier selling personalised apparel to clubs and companies, which makes it a competitor or reseller rather than a business whose own staff wear uniforms or PPE on site or face customers.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 25,
+          "band": "weak",
+          "reason": "Impack Branding is a branding and promotional products supplier serving clubs, companies and organisations, with no mention of its own car park, yard, company vehicles or visitors, so it is only a weak match for EV charge point installation.",
           "opener": null
         }
       }
@@ -1639,6 +2534,36 @@
           "band": "possible",
           "reason": "The company installs and repairs household appliances from a single Seaham premises, which implies field technicians and physical work, but it sells mainly to consumers (B2C) and its headcount is not stated.",
           "opener": "Calverts Electrical has installed and repaired household appliances from its Seaham shop since 1938. Our accredited health and safety, first aid and manual handling training could help your team work safely on installation and repair jobs."
+        },
+        "commercial_cleaning": {
+          "score": 60,
+          "band": "possible",
+          "reason": "The company runs a single customer-facing shop at 60-62 Church St, Seaham, which falls under the shops we serve, but it sells mainly to households rather than businesses and the profile gives no staff numbers.",
+          "opener": "Calverts Electrical runs a single shop at 60-62 Church St, Seaham, where customers visit in person. We provide commercial cleaning for shops and keep customer-facing premises clean and presentable."
+        },
+        "web_marketing": {
+          "score": 85,
+          "band": "strong",
+          "reason": "A local, customer-facing Seaham business that installs and repairs appliances for households and is established since 1938, matching the trades-style local customers the team targets, though no online presence or marketing is mentioned.",
+          "opener": "Your Church Street shop in Seaham has been selling, installing and repairing household appliances since 1938. Our websites and local search work would help more households in County Durham find you when they need a repair or a new washing machine."
+        },
+        "bookkeeping": {
+          "score": 62,
+          "band": "possible",
+          "reason": "The company is a limited company that sells, installs and repairs household appliances from a single Seaham shop, which implies staff and some regular trading, but it sells mainly to consumers rather than invoicing businesses, and owner-management and invoicing volume are not stated.",
+          "opener": "Calverts has sold, installed and repaired household appliances from its Seaham shop since 1938. Our bookkeeping, payroll and year-end accounts service could take the back-office work off your hands while you focus on customers."
+        },
+        "workwear": {
+          "score": 65,
+          "band": "possible",
+          "reason": "The company installs and repairs household appliances for consumers in Seaham and County Durham, which implies engineers working on customers' premises, but the profile does not state staff numbers or any uniform use, and its customers are households rather than businesses.",
+          "opener": "Calverts Electrical installs and repairs household appliances across Seaham and County Durham. Our branded workwear, uniforms and PPE could help your installation and repair engineers look professional and stay protected on customer visits."
+        },
+        "ev_charging": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The company is a single-shop B2C retailer serving households in Seaham, with no stated car park, yard, company fleet or business premises that match the ideal customer.",
+          "opener": null
         }
       }
     },
@@ -1697,6 +2622,36 @@
           "band": "strong",
           "reason": "A County Durham mechanical and electrical engineering firm doing site-based building projects, which is the physical, employee-led work the sales team targets, though the profile gives no headcount.",
           "opener": "Your work on commercial, healthcare and education building projects across the North East involves site-based engineering teams every day. Our accredited health and safety, first aid and manual handling training could help keep those teams compliant and protected on site."
+        },
+        "commercial_cleaning": {
+          "score": 30,
+          "band": "weak",
+          "reason": "Leybourne Urwin is a mechanical and electrical contractor working on building projects, and its profile shows no premises that staff or customers use daily, so it is only a partial match to the cafes, clinics, gyms and offices the team serves best.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 55,
+          "band": "possible",
+          "reason": "Leybourne Urwin is a County Durham mechanical and electrical engineer serving North East clients, which fits the local trade profile, but it sells B2B to organisations on building projects rather than to consumers, so the customer-facing match is only partial.",
+          "opener": "Your mechanical and electrical work for North East healthcare and education projects relies on being found by local clients. We design websites and run local search marketing that help regional trade firms show up when buyers search nearby."
+        },
+        "bookkeeping": {
+          "score": 72,
+          "band": "possible",
+          "reason": "The profile describes an owner-managed family business in County Durham doing mechanical and electrical installation work on building projects, which implies employees and regular invoicing, but it states no headcount and no invoicing detail.",
+          "opener": "Your firm's four generations of family history in mechanical and electrical work across the North East stands out. We handle bookkeeping, payroll and year-end accounts for owner-managed trades firms with regular invoicing, which could free your time for project work."
+        },
+        "workwear": {
+          "score": 88,
+          "band": "strong",
+          "reason": "A mechanical and electrical engineering firm working on building projects in County Durham, whose engineers clearly work on site, matching the ideal customer of businesses with staff working on site, though headcount is not stated.",
+          "opener": "Leybourne Urwin's mechanical and electrical engineering work on building projects across the North East means your engineers are likely on site most days. We supply branded workwear, uniforms and PPE for site teams like yours, and could help keep your crews kitted out and identifiable."
+        },
+        "ev_charging": {
+          "score": 30,
+          "band": "weak",
+          "reason": "Leybourne Urwin is a mechanical and electrical contractor serving building projects, with no stated car park, yard, company vehicle fleet or premises that would need charge points, so it is only a partial match to the ideal customer.",
+          "opener": null
         }
       }
     },
@@ -1753,6 +2708,36 @@
           "score": 35,
           "band": "weak",
           "reason": "Lymph Solutions offers private lymphoedema care and training, which touches the care sector, but it sells mainly to private clients and individuals rather than employers, and the profile does not state a team of employees.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 40,
+          "band": "weak",
+          "reason": "The profile describes lymphoedema training, courses and private care but does not say the company has its own premises, so it is only a partial match for a business that needs regular commercial cleaning of a site.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 65,
+          "band": "possible",
+          "reason": "The company offers private lymphoedema care and courses from a Durham base, which is customer-facing local work that suits local search, but the profile does not say how clients currently find them and the market is split between private clients and training buyers.",
+          "opener": "Lymph Solutions offers private lymphoedema care and MLD treatment in Durham. Our website design and local search work could help people nearby find your care and courses more easily."
+        },
+        "bookkeeping": {
+          "score": 35,
+          "band": "weak",
+          "reason": "Lymph Solutions is a Durham provider of lymphoedema training and private care, which is a clinical and education business rather than an owner-managed trade, manufacturer, agency or retailer with regular invoicing, and no staff numbers are stated.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 60,
+          "band": "possible",
+          "reason": "The company provides private lymphoedema care, which fits the care provider category, but the profile does not mention uniforms, on-site work or staff in customer-facing roles, and much of its business is training and courses.",
+          "opener": "Lymph Solutions offers private lymphoedema care alongside its training courses in Durham. Our branded workwear and PPE could help your care team look professional and stay protected."
+        },
+        "ev_charging": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "The company provides lymphoedema training and private care for clients and course attendees, with no sign of a car park, yard, company vehicles or premises that would need charge points, so it falls outside the ideal customer types.",
           "opener": null
         }
       }
@@ -1818,6 +2803,36 @@
           "band": "possible",
           "reason": "The company runs a three-vessel fleet and does marine fabrication and bespoke vessel build in Middlesbrough, which points to a physical workforce on the water and in the yard, though the profile gives no headcount and does not mention staff training or safety roles.",
           "opener": "Your fleet of three survey vessels and marine fabrication work in Middlesbrough suggests crews and yard staff handling heavy equipment at sea and on site. Our accredited health and safety, first aid and manual handling courses could help keep those teams trained and compliant."
+        },
+        "commercial_cleaning": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "Marshall Jakeman Marine charters survey vessels to offshore wind survey providers and project operators, which is not the premises-based businesses such as cafes, clinics and offices that the cleaning service targets, and it has no public-facing premises used daily by staff or customers.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "Marshall Jakeman Marine sells B2B survey vessel charter to offshore wind operators and survey providers across the UK and Europe, not customer-facing local work, so it falls outside the ideal customer of trades, salons, cafes, clinics and independent shops.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 35,
+          "band": "weak",
+          "reason": "The company runs a fleet of three survey vessels and does marine fabrication, which suggests a workforce, but it sells charter and vessel design to offshore wind operators rather than being an owner-managed trade, manufacturer or retailer with regular invoicing, so it is a weak match.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 65,
+          "band": "possible",
+          "reason": "The company runs marine fabrication and charters survey vessels for offshore wind work, which implies vessel and fabrication staff on site, but the profile does not state headcount or mention uniforms or PPE.",
+          "opener": "Marshall Jakeman Marine provides marine fabrication and survey vessel charter for the offshore wind sector from Middlesbrough. Our branded workwear and PPE could equip your fabrication and vessel teams for demanding work at sea."
+        },
+        "ev_charging": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "Marshall Jakeman Marine charters survey vessels for offshore wind and does not mention a car park, yard, company road vehicles or visitors, so the profile points away from the ideal customer types such as garages, hire firms, hotels, retail sites and industrial units.",
+          "opener": null
         }
       }
     },
@@ -1877,6 +2892,36 @@
           "band": "strong",
           "reason": "A Newcastle contractor that installs, services and repairs commercial equipment on physical sites, including 24-hour emergency callouts, which implies a field team, matching the site-based work the training targets, though headcount is not stated.",
           "opener": "Your team handles 24-hour emergency repairs and installs commercial refrigeration and air conditioning across the North East, so field work on live sites is a core part of what you do. We deliver accredited manual handling, first aid and health and safety training for employers with teams doing that kind of physical work."
+        },
+        "commercial_cleaning": {
+          "score": 25,
+          "band": "weak",
+          "reason": "Millennium Refrigeration is a commercial refrigeration and air conditioning contractor that works on other businesses' sites, and the profile does not describe its own premises or a daily-use site that would need commercial cleaning, so it is only a weak match for the ideal customer.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 62,
+          "band": "possible",
+          "reason": "Newcastle-based commercial refrigeration and air conditioning contractor serving shops, hospitality and healthcare sites, which is a trade that wins work locally, but the profile says nothing about its online presence and it sells mainly to businesses rather than walk-in customers.",
+          "opener": "Your team has served some North East customers for over 15 years, and your 24-hour emergency repair service stands out. We build websites and run local search marketing that helps trades like yours get found by new commercial and domestic customers when they need urgent help."
+        },
+        "bookkeeping": {
+          "score": 78,
+          "band": "possible",
+          "reason": "A Newcastle contractor established in 2000 that installs, services and repairs equipment with 24-hour emergency callouts and regular planned maintenance work, which implies staff and recurring invoicing, though headcount and turnover are not stated.",
+          "opener": "Your planned servicing and 24-hour emergency repair work across Tyneside suggests a steady flow of job invoices and engineer timesheets to keep on top of. We handle bookkeeping, payroll and year-end accounts for owner-managed firms like yours, so that paperwork can run alongside the day-to-day work."
+        },
+        "workwear": {
+          "score": 85,
+          "band": "strong",
+          "reason": "Field engineering contractor that installs, services and repairs equipment on customer premises across the North East, with a 24-hour emergency repair service, so its staff clearly work on site.",
+          "opener": "Your engineers attend commercial sites across the North East, including 24-hour emergency repairs, so site uniforms and PPE are likely part of daily work. We supply branded workwear, uniforms and PPE for maintenance and installation teams like yours."
+        },
+        "ev_charging": {
+          "score": 45,
+          "band": "weak",
+          "reason": "They are a Newcastle refrigeration and air conditioning contractor with field service work implying vans and engineers, but the profile does not mention their own car park, yard, or company vehicles, and they are a service contractor rather than a garage, hire firm, hotel or retail site, so the fit is partial.",
+          "opener": null
         }
       }
     },
@@ -1938,6 +2983,36 @@
           "band": "possible",
           "reason": "NECIT is a Durham inspection and non-destructive testing firm with a global network of multi-skilled inspection experts and is recruiting in Durham, so it plausibly employs site-based staff, but its inspection consultancy work for engineering projects only partly matches the physical work and employee base the training targets and its headcount is not stated.",
           "opener": "NECIT's global network of multi-skilled inspection experts working on engineering projects suggests a team regularly on site. Our accredited health and safety, first aid and manual handling training could help keep those inspectors protected in the field."
+        },
+        "commercial_cleaning": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "NECIT sells inspection, certification and consultancy to engineering projects in oil and gas, renewables and power, which is far from the cleaning customers we serve, and the profile gives no sign of premises that staff or customers use every day.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "NECIT sells inspection and certification services to engineering companies on large oil, gas and power projects worldwide, which is B2B and not a local customer-facing business, so it falls outside the ideal customer despite having a Durham base.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 25,
+          "band": "weak",
+          "reason": "NECIT is a Durham inspection and non-destructive testing firm selling to large engineering projects worldwide, which is a service business with staff but sits outside the owner-managed trades, manufacturing, agency and retail profile, and its \"global network\" and senior hires suggest a larger firm than the target.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 60,
+          "band": "possible",
+          "reason": "NDT and inspection work for engineering projects in oil and gas, renewables and power generation implies field inspectors on site, but the profile does not say whether they wear branded uniforms or PPE.",
+          "opener": "Your global network of multi-skilled inspection experts supports engineering projects in oil and gas, renewables and power generation. We supply branded workwear and PPE for site teams, which could suit inspectors working on those projects."
+        },
+        "ev_charging": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "NECIT is an inspection and non-destructive testing consultancy serving engineering projects in oil and gas and power, with no sign of company vehicles, a car park or yard, or premises that suit EV charge points.",
+          "opener": null
         }
       }
     },
@@ -1997,6 +3072,36 @@
           "band": "not a fit",
           "reason": "Nelson Bridges is a legal recruitment consultancy placing solicitors and conveyancers with law firms, an office-based business with no site-based or physical work, so it is not a sensible prospect for accredited health and safety, first aid and manual handling training.",
           "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 40,
+          "band": "weak",
+          "reason": "Nelson Bridges is a legal recruitment consultancy in Hartlepool, which is a partial match because it is an office-based business with a team, but the profile does not mention its own premises or staff on site, and its work is recruitment rather than the kind of daily premises use the sales team targets.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 18,
+          "band": "not a fit",
+          "reason": "Nelson Bridges is a B2B legal recruitment consultancy selling to law firms rather than a customer-facing local business, so it falls outside the ideal customer despite being based in Hartlepool.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 60,
+          "band": "possible",
+          "reason": "The profile describes a UK-wide legal recruitment consultancy with nine current vacancies and growth from regional to national, which fits the agency category, but it states no size or ownership details and is a service firm rather than a trade, manufacturer or retailer.",
+          "opener": "Nelson Bridges lists nine current vacancies across several towns and has grown into a UK-wide recruitment agency. We provide bookkeeping, payroll and year-end accounts for owner-managed firms that invoice regularly, so we could help keep your books in order."
+        },
+        "workwear": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The profile describes a legal recruitment consultancy that places solicitors and conveyancers with law firms and does not mention any staff working on site, in trades, or facing customers in uniform, so it falls outside the ideal customer.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "Nelson Bridges is a legal recruitment consultancy placing candidates with law firms, and the profile mentions no car park, yard, company vehicles or visitor traffic, so it falls outside the best-fit businesses such as garages, vehicle hire firms, hotels, retail sites and industrial units.",
+          "opener": null
         }
       }
     },
@@ -2054,6 +3159,36 @@
           "score": 8,
           "band": "not a fit",
           "reason": "The company makes promotional and educational videos for schools and colleges, with no site-based or physical work and no stated employee team beyond video production experience, so it does not match the ideal customer of firms with physical work and employees.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is a video production business for education clients with no premises, customers visiting or on-site staff described, so it does not match the commercial cleaning ideal customer.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company sells B2B video production to schools, colleges and training providers, which is not the customer-facing local trade, salon, cafe, clinic or shop market the sales team serves, so it is a weak prospect.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 58,
+          "band": "possible",
+          "reason": "The company is a limited company with a long-standing client relationship with Derwentside College, which has produced over 100 videos since 2018, and a team with over 25 years of combined experience, but the profile gives no staff numbers or invoicing detail and it is a video production business rather than one of the trades, manufacturers or retailers the team targets most often.",
+          "opener": "Your long-standing relationship with Derwentside College, which has produced over 100 videos since 2018, suggests repeat project work. We provide bookkeeping, payroll and year-end accounts for small limited companies that invoice regularly, so admin can sit alongside production."
+        },
+        "workwear": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company makes promotional and educational videos for schools and colleges, and the profile gives no sign of staff working on site or facing customers in uniform, so it falls outside the ideal customer.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "The company is a video production firm serving schools and colleges, with no stated car park, yard, company vehicle fleet or visitor traffic that would need EV charging at its premises.",
           "opener": null
         }
       }
@@ -2117,6 +3252,36 @@
           "band": "not a fit",
           "reason": "The company is an online retailer of vehicle parts selling B2C to vehicle owners, with no site-based or physical work and no sign of a team of employees in the profile, so it is a weak match for accredited health and safety, first aid and manual handling training.",
           "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "OMS Automotive is an online-only B2C parts retailer shipping by Royal Mail, with no physical premises mentioned in the profile, so it does not match the ideal customer of businesses with their own premises used daily by staff or customers.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 25,
+          "band": "weak",
+          "reason": "OMS Automotive sells car and van parts online, mainly to customers across the UK and internationally via Royal Mail, rather than winning work locally, so it only partly matches the local, customer-facing ideal customer.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 55,
+          "band": "possible",
+          "reason": "OMS Automotive is an established Newcastle parts retailer, trading for over 10 years and dispatching six days a week, which implies staff, but it sells B2C online with no evidence of regular business invoicing or stated headcount.",
+          "opener": "Your online store has dispatched parts six days a week for over ten years, which means a steady run of sales to keep track of. Our bookkeeping, payroll and year-end accounts service could take that admin off your hands."
+        },
+        "workwear": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "OMS Automotive is an online retailer of vehicle parts sold B2C to van owners, with no sign of staff working on site or customer-facing uniformed roles, so it is a weak match for branded workwear.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 25,
+          "band": "weak",
+          "reason": "The profile describes an online B2C parts retailer that ships parcels by Royal Mail, with no mention of its own car park, yard, company vehicles or visiting customers, so it is only a weak match for the ideal premises-based customer.",
+          "opener": null
         }
       }
     },
@@ -2176,6 +3341,36 @@
           "score": 12,
           "band": "not a fit",
           "reason": "The company is a managed IT support provider with office-based services and no site-based or physical work, so it does not match the health and safety, first aid and manual handling training customer profile despite having a team.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "The company is a managed IT support provider with no physical premises that staff or customers use daily, which is the opposite of the cleaning service's best-fit customer, so it is a weak prospect.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is a B2B managed IT support provider selling to other businesses, which is the opposite of the customer-facing local trades, salons, cafes, clinics and shops the sales team targets, so it is not a sensible prospect.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 25,
+          "band": "weak",
+          "reason": "The company is a managed IT support provider with a team of engineers and about 20 years' experience, but it sits outside the ideal sectors of trades, small manufacturers, agencies and independent retailers, and the profile gives no sign it is owner-managed or has regular invoicing needs that match the offer.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is a managed IT support provider whose staff work in offices and remotely, not on site or in customer-facing uniform, so it is a poor match for branded workwear, uniforms and PPE.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "The company is a managed IT support provider with no premises, car park, yard or vehicle fleet described, so there is little reason to think it needs EV charge points at its own site.",
           "opener": null
         }
       }
@@ -2242,6 +3437,36 @@
           "band": "not a fit",
           "reason": "OWA Digital is a web development agency with desk-based, digital work and no site-based or physical operations, which points away from the physical-work customers the sales team targets.",
           "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "OWA Digital is a web development agency with no own premises that staff or customers use daily, so it is a poor match for commercial cleaning despite its UK base and size signals.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "OWA Digital is a B2B web development agency selling to businesses, public bodies and charities rather than customer-facing local businesses such as trades, salons, cafes, clinics or shops, so it is a poor match for the local search and social media offer.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 60,
+          "band": "possible",
+          "reason": "OWA Digital is a UK web development agency, and agencies are a listed best fit, but the profile gives no headcount or ownership details, and its 250+ clients and public-sector work suggest it may be larger than the owner-managed firms the team targets.",
+          "opener": "Your agency has completed over 500 projects since 1995. We provide bookkeeping, payroll and year-end accounts for small limited companies, so your invoicing and staff pay could be handled off your desk."
+        },
+        "workwear": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "OWA Digital is a web development agency whose work is software and hosting, with no staff working on site or facing customers in uniform, so it is a poor match for branded workwear, uniforms and PPE.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "OWA Digital is a web development agency with no vehicles, car park, yard or premises described in the profile, so there is no clear reason it would need EV charge points.",
+          "opener": null
         }
       }
     },
@@ -2301,6 +3526,36 @@
           "band": "possible",
           "reason": "The company runs 15 self-catering holiday properties and a 5-pitch caravan and motorhome site, which is hospitality work on physical premises that implies employees, but the profile does not state a staff team and its customers are consumers rather than businesses.",
           "opener": "Your Lake District estate runs 15 self-catering properties and a 5-pitch caravan and motorhome site. Our accredited first aid, manual handling and health and safety training suits hospitality teams who maintain premises like these."
+        },
+        "commercial_cleaning": {
+          "score": 60,
+          "band": "possible",
+          "reason": "The company runs 15 self-catering holiday properties, a caravan and motorhome pitch site and wedding venue hire, which are premises used by guests, matching the hospitality venues the sales team serves, but the profile gives no staffing or cleaning details and lists a North Shields location for a Lake District estate.",
+          "opener": "Your 15 self-catering holiday properties and wedding venue hire at Patterdale Hall give guests shared premises to use during their stay. We provide commercial cleaning for hospitality venues and could help keep those spaces consistently ready for guests."
+        },
+        "web_marketing": {
+          "score": 72,
+          "band": "possible",
+          "reason": "The estate sells directly to consumers (families, walkers, couples and caravan users) through 15 self-catering properties and a 5-pitch site, which suits a customer-facing business that would gain from online discovery, but it is a Lake District holiday operator with a North Shields address rather than a local trade, salon, cafe or shop.",
+          "opener": "Patterdale Hall Estate offers 15 self-catering properties and a 5-pitch caravan and motorhome site in the Lake District. Our website design and local search work could help holidaymakers looking for those stays find you more easily."
+        },
+        "bookkeeping": {
+          "score": 35,
+          "band": "weak",
+          "reason": "The company is a B2C holiday accommodation business with 15 properties and a 5-pitch site, which is outside the trades, manufacturing, agency and retail sectors the team targets, and its profits go to charity rather than owners, so it is only a partial match.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 55,
+          "band": "possible",
+          "reason": "The company runs 15 self-catering holiday properties and a 5-pitch caravan and motorhome site, which suggests hospitality-style work with guests, but the profile does not state any staff or uniform needs, and its customers are holidaymakers rather than businesses.",
+          "opener": "Your Lake District estate runs 15 self-catering properties and a 5-pitch caravan and motorhome site. We supply branded workwear and uniforms for staff who work on site and meet guests every day."
+        },
+        "ev_charging": {
+          "score": 60,
+          "band": "possible",
+          "reason": "The estate has 15 self-catering properties and a 5-pitch caravan and motorhome site, so guests likely arrive by vehicle and need parking, but the profile shows no company vehicles and it is a B2C holiday business rather than one of the listed best-fit types such as garages, hire firms or hotels.",
+          "opener": "Your 15 self-catering properties and 5-pitch caravan and motorhome site serve holidaymakers visiting the Lake District. We install electric vehicle charge points at business premises with car parks, which could let guests charge their vehicles during a stay."
         }
       }
     },
@@ -2355,6 +3610,36 @@
           "band": "possible",
           "reason": "The company manufactures photonic medical devices at a Sedgefield base, which implies physical production work and staff, but the profile states no headcount and does not describe its workforce or site safety arrangements.",
           "opener": "POLYPHOTONIX designs and manufactures photonic medical devices in Sedgefield. Our accredited manual handling and health and safety training could help your manufacturing team meet its workplace safety duties."
+        },
+        "commercial_cleaning": {
+          "score": 60,
+          "band": "possible",
+          "reason": "The company designs and manufactures medical devices in Sedgefield, which points to a working site with staff, but the profile does not state premises size, headcount or whether the site is used daily, and the market is unclear.",
+          "opener": "Your team in Sedgefield designs and manufactures non-invasive photonic medical devices, so your site is a working premises. We provide commercial cleaning for workshops and offices with a team, and could cover that space."
+        },
+        "web_marketing": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "Polyphotonix is a medical device manufacturer selling to health services and universities, not the customer-facing local businesses such as trades, salons or clinics that the sales team targets, so it is a poor match.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 55,
+          "band": "possible",
+          "reason": "Polyphotonix is a manufacturer of photonic medical devices, which fits the small owner-managed manufacturer profile, but the site gives no headcount, invoicing signals or ownership details, so the fit is only plausible.",
+          "opener": "Your Noctura 400 home-based sleep mask for diabetic retinopathy suggests a manufacturing operation with regular supplier and customer invoicing. We provide bookkeeping, payroll and year-end accounts for small manufacturers, which could take that admin off your team."
+        },
+        "workwear": {
+          "score": 35,
+          "band": "weak",
+          "reason": "The company is a medical device manufacturer whose staff likely work in labs and offices rather than on site or in customer-facing uniform, and no headcount is stated, so it is only a weak match for branded workwear and PPE.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "Polyphotonix is a medical device designer and manufacturer selling home-based eye treatment, with no stated car park, yard, company vehicle fleet or visitor base that the charge point offer targets.",
+          "opener": null
         }
       }
     },
@@ -2410,6 +3695,36 @@
           "band": "possible",
           "reason": "A Newcastle garage doing mechanical repairs, bodyshop work and tyre fitting is physical, site-based work that implies a team of employees, but the profile states no headcount and it sells B2C to vehicle owners.",
           "opener": "Your Newcastle garage handles mechanical repairs, bodyshop work and tyre fitting, which means a workshop team working with vehicles every day. Our accredited manual handling and first aid training could help your staff stay safe while doing that work."
+        },
+        "commercial_cleaning": {
+          "score": 55,
+          "band": "possible",
+          "reason": "The company runs a vehicle servicing and repair garage in Newcastle with its own workshop work (mechanical and bodyshop repairs, MOTs), which implies premises and staff, but it sells B2C and the profile gives no headcount.",
+          "opener": "Your garage in Newcastle offers MOTs, servicing and bodyshop repairs, so your workshop and reception see customers and staff every working day. We provide commercial cleaning for workshops and trade premises, and could keep yours spotless between jobs."
+        },
+        "web_marketing": {
+          "score": 82,
+          "band": "strong",
+          "reason": "A Newcastle garage offering servicing, MOTs, tyres and mechanical and bodyshop repairs to local vehicle owners is a customer-facing local trade that would benefit from local search visibility, although no size details are stated.",
+          "opener": "Your garage in Newcastle offers servicing, MOTs, tyres and bodyshop repairs to local drivers. Drivers searching for a garage nearby are likely to find businesses with a clear online presence first, and we help local trades get found."
+        },
+        "bookkeeping": {
+          "score": 62,
+          "band": "possible",
+          "reason": "A Newcastle garage doing servicing, MOTs, tyres and mechanical and bodyshop repairs is a trade business with regular invoicing and likely staff, but the profile states no headcount and it sells mainly to consumers (B2C), which is a partial match for the ideal customer.",
+          "opener": "Premier Vehicle Care offers servicing, MOTs, tyres and bodyshop repairs from its Newcastle upon Tyne garage. Our bookkeeping, payroll and year-end accounts service is built for owner-managed trade firms like yours that invoice regularly and employ a small team."
+        },
+        "workwear": {
+          "score": 72,
+          "band": "possible",
+          "reason": "A Newcastle garage doing mechanical and bodyshop repairs and tyre fitting implies mechanics and technicians working on site in workshop environments, a fit for branded workwear and PPE, though no headcount is stated and the company sells B2C to vehicle owners.",
+          "opener": "Your Newcastle garage offers mechanical repairs, bodyshop work and tyre fitting, so your technicians are likely working in workshop conditions every day. We supply branded workwear and PPE for garage and maintenance teams, which could help your team look consistent and stay protected on the job."
+        },
+        "ev_charging": {
+          "score": 82,
+          "band": "strong",
+          "reason": "A Newcastle vehicle servicing and repair garage offering MOTs, mechanical and bodyshop repairs fits the best-fit category of garages with premises and vehicles on site, though the profile does not mention a car park or yard or staff numbers.",
+          "opener": "Your garage in Newcastle offers servicing, MOTs and bodyshop repairs, so customers are likely to be on site for several hours at a time. We install electric vehicle charge points at business premises, which could give those customers a place to charge while they wait."
         }
       }
     },
@@ -2463,6 +3778,36 @@
           "band": "possible",
           "reason": "The company refurbishes homes, which is site-based physical work that implies employees, but the profile states no headcount and its letting and property sales services are less typical of the training ideal customer.",
           "opener": "Property Elevations refurbishes rental homes across Darlington and County Durham, which is hands-on site work. Our accredited health and safety, first aid and manual handling training could help any team carrying out that work."
+        },
+        "commercial_cleaning": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "Property Elevations refurbishes and lets homes and helps homeowners sell, with no office, shop or venue that staff or customers use daily, so it falls outside the commercial cleaning customer described.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 45,
+          "band": "weak",
+          "reason": "Property Elevations is a local, consumer-facing business in Darlington that serves tenants and homeowners, which partly matches the ideal customer, but its core work is refurbishing and letting its own properties rather than a trade or service business that wins work locally and would gain from being found online.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 62,
+          "band": "possible",
+          "reason": "The company refurbishes and lets properties in Darlington, which implies a small owner-managed operation with regular rental income and invoicing, though its headcount and invoicing volume are not stated.",
+          "opener": "Your refurbished rental homes in Darlington and County Durham suggest a steady stream of lettings and tenant invoicing to keep on top of. We provide bookkeeping, payroll and year-end accounts for small limited companies like yours, so that work can be handled without taking up your time."
+        },
+        "workwear": {
+          "score": 68,
+          "band": "possible",
+          "reason": "Refurbishing rental homes implies staff working on site, which matches the ideal customer, but the profile gives no headcount and the letting and property sales services suggest less uniform-facing work.",
+          "opener": "Property Elevations refurbishes homes in Darlington and County Durham before letting them to tenants. Our branded workwear and PPE could keep refurbishment staff looking professional and protected on site."
+        },
+        "ev_charging": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The company refurbishes and lets residential homes to tenants and helps homeowners sell, with no mention of a car park, yard, company fleet or visitors, so it does not match the business premises the team targets.",
+          "opener": null
         }
       }
     },
@@ -2519,6 +3864,36 @@
           "score": 8,
           "band": "not a fit",
           "reason": "Pyralink is an office-based cybersecurity and AI assurance consultancy selling to technology firms, with no site-based or physical work and no staff numbers stated, so it falls outside the ideal health and safety training customer.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "PYRALINK is a cybersecurity and AI assurance consultancy selling software-based compliance and advisory services to technology firms, which does not match a business needing commercial cleaning of its own premises used daily by staff or customers.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 5,
+          "band": "not a fit",
+          "reason": "PYRALINK is a B2B cybersecurity and AI assurance consultancy selling to technology scale-ups and enterprises, not the customer-facing local trades, salons, cafes, clinics or shops the sales team targets.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "The company is a cybersecurity and AI assurance consultancy selling to technology scale-ups and enterprises, which is the opposite of the owner-managed trades, manufacturers, agencies and retailers this bookkeeping and payroll service targets, and it is itself a professional services firm.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 5,
+          "band": "not a fit",
+          "reason": "PYRALINK is a cybersecurity and AI assurance consultancy selling software-style compliance services to technology firms, with no site work, uniformed staff or customer-facing workforce described, so it falls outside the workwear and PPE ideal customer.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "PYRALINK is a cybersecurity and AI assurance consultancy with no car park, yard, company vehicles or premises use described, so it does not match the garages, hire firms, hotels, retail or industrial units that the EV charge point offer targets.",
           "opener": null
         }
       }
@@ -2579,6 +3954,36 @@
           "band": "possible",
           "reason": "Sabre Material Handling is a Durham-based forklift sales, hire and repair business with physical site-based work such as repairs, servicing and LOLER inspections, which implies a workforce, though headcount is not stated.",
           "opener": "Your team repairs, services and carries out LOLER thorough examinations on forklift trucks across the North East, which involves hands-on work around heavy equipment. Our accredited manual handling and health and safety training could help your engineers work safely on the job."
+        },
+        "commercial_cleaning": {
+          "score": 35,
+          "band": "weak",
+          "reason": "Sabre Material Handling is a Durham-based forklift sales, hire and repair business with its own workshop-type operations, but the profile does not mention cafes, pubs, clinics, offices or customer-facing premises, so it is only a partial match to the ideal customer.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 25,
+          "band": "weak",
+          "reason": "Sabre Material Handling is a B2B forklift sales, hire and repair firm selling mainly to other businesses across the North East, which is outside the customer-facing local businesses this team targets, so it is a weak match.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 72,
+          "band": "possible",
+          "reason": "Sabre is a Durham-based forklift sales, hire and repair firm with an operational service business that likely employs technicians and sales staff and invoices businesses regularly, but the profile gives no headcount and no ownership details.",
+          "opener": "Your forklift sales, hire and repair work across the North East involves regular servicing and LOLER examinations that generate a steady flow of invoices. We help owner-managed trades and service firms keep bookkeeping, payroll and year-end accounts in order without the admin building up."
+        },
+        "workwear": {
+          "score": 72,
+          "band": "possible",
+          "reason": "Sabre runs field engineering work (forklift repairs, servicing and LOLER inspections across the North East), so its engineers plausibly work on site in workwear, but the profile gives no headcount and does not mention uniforms or customer-facing staff.",
+          "opener": "Your engineers carry out forklift repairs, servicing and LOLER inspections across the North East, which often means working on customer sites. We supply branded workwear, uniforms and PPE for field teams like yours, and could outfit them to match your brand."
+        },
+        "ev_charging": {
+          "score": 55,
+          "band": "possible",
+          "reason": "Sabre Material Handling is a Durham-based forklift sales, hire and repair firm with a yard-type industrial operation implied by its services, but the profile does not mention a car park, yard, company vehicle fleet or visitors, so the evidence for charge point demand is missing.",
+          "opener": "Your Durham team handles forklift sales, hire and repairs across the North East, which means a busy yard of trucks needing regular attention. We install electric vehicle charge points at business premises, and could look at whether your site and any company vans could use them."
         }
       }
     },
@@ -2639,6 +4044,36 @@
           "score": 35,
           "band": "weak",
           "reason": "Samuel Grant is a B2B packaging supplier with a long-standing team, but the profile describes product supply rather than the construction, engineering, maintenance, care or hospitality work the training is aimed at, so it is only a partial match.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 25,
+          "band": "weak",
+          "reason": "The profile describes a B2B packaging supplier selling protective packaging, pallet wrapping and strapping products, with no mention of its own premises used daily by staff or customers, so it is only a weak match for commercial cleaning.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "Samuel Grant is a B2B packaging supplier selling to UK businesses, not a customer-facing local business such as a trade, salon, cafe, clinic or independent shop, so it sits outside the ideal customer described.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 65,
+          "band": "possible",
+          "reason": "A UK B2B packaging supplier established in 1891 with a long-standing team, which suggests employees and regular invoicing, but the profile does not state its headcount or whether it is owner-managed.",
+          "opener": "Protective packaging and pallet wrapping supplied to UK food and retail chains since 1891 is a long track record. We handle bookkeeping, payroll and year-end accounts for small limited companies that invoice regularly."
+        },
+        "workwear": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The profile describes a packaging supplier selling protective packaging, pallet wrapping and strapping to other businesses, with no sign of a uniformed or on-site workforce that would need branded workwear, uniforms or PPE.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 25,
+          "band": "weak",
+          "reason": "The company is a packaging supplier in Jarrow with no stated car park, yard, company vehicle fleet or visitor traffic, so it only weakly matches the ideal customer of businesses with premises and vehicles for charging.",
           "opener": null
         }
       }
@@ -2701,6 +4136,36 @@
           "band": "not a fit",
           "reason": "Seriös Group is a data solutions consultancy selling software and consulting, with no site-based or physical work, and the profile shows no evidence of a sizeable employee base in the kind of work the training suits, so the fit is weak.",
           "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "Seriös Group is a data solutions consultancy that sells software and advisory services, with no sign of its own premises used daily by staff or customers, so it is not the cafe, pub, clinic, gym or workshop type of business this cleaning service targets.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "Seriös Group is a B2B data solutions consultancy selling to large enterprises and named clients such as JLL and tombola, not a customer-facing local business like the trades, salons, cafes or shops the sales team targets.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 30,
+          "band": "weak",
+          "reason": "Seriös Group is a Newcastle data solutions consultancy serving large named clients such as JLL and Sunderland AFC, which is a professional services model outside the trades, manufacturing, agencies and independent retail the team targets, though its open roles suggest it has staff.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "Seriös Group is a data solutions consultancy selling software and advisory services, with no evidence of staff working on site or in uniform, so it does not match the builders, maintenance firms, cleaners, hospitality or care providers the team targets.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "Seriös Group is a data solutions consultancy with no premises, car park, yard or company vehicles mentioned in the profile, so it does not match the business types that need charge points.",
+          "opener": null
         }
       }
     },
@@ -2756,6 +4221,36 @@
           "band": "strong",
           "reason": "The company runs site-based industrial plant relocation, installation, maintenance and electrical work, which is the physical, employee-based work the sales team targets, though its headcount is not stated.",
           "opener": "Your team's work moving, installing and maintaining industrial plant at sites across the country stands out. Our accredited health and safety, first aid and manual handling training could help keep your engineers safe on that kind of physical work."
+        },
+        "commercial_cleaning": {
+          "score": 30,
+          "band": "weak",
+          "reason": "The company does industrial plant relocation, maintenance and electrical work, which implies workshop or site premises, but the profile does not show a staffed or customer-facing site that needs regular commercial cleaning, and its clients are industrial businesses rather than the offices, shops, clinics or hospitality venues the team targets.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is a B2B industrial plant relocation and maintenance firm selling to industrial businesses, which sits outside the customer-facing local trades, salons, cafes, clinics and shops the sales team targets.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 62,
+          "band": "possible",
+          "reason": "The company is an industrial plant relocation, installation, maintenance and electrical contractor, so it very likely has field engineers and regular invoicing, but the profile states no headcount and no owner-managed detail.",
+          "opener": "Your work on plant relocation, installation and electrical fault finding means regular job invoicing across multiple sites. We handle bookkeeping, payroll and year-end accounts for small limited companies like yours, so your records stay current between jobs."
+        },
+        "workwear": {
+          "score": 85,
+          "band": "strong",
+          "reason": "The company runs plant installation, maintenance, electrical work and pipework on industrial sites, so its engineering staff plausibly work on site in workwear and PPE, which matches the ideal customer, though headcount is not stated.",
+          "opener": "Your team handles plant relocation, installation and maintenance across industrial sites in Chilton Ferryhill and beyond. Our branded workwear and PPE can keep engineers protected and identifiable on every job."
+        },
+        "ev_charging": {
+          "score": 55,
+          "band": "possible",
+          "reason": "The company serves industrial businesses with plant relocation, installation and electrical work in Chilton Ferryhill, which matches the listed industrial unit fit, but the profile gives no evidence of its own car park, yard, company vehicles or visitors.",
+          "opener": "Your team handles plant relocation, installation and electrical work for industrial businesses from Chilton Ferryhill. We install electric vehicle charge points at business premises, which could suit industrial units with a yard and company vehicles or visitors."
         }
       }
     },
@@ -2809,6 +4304,36 @@
           "band": "strong",
           "reason": "The company runs a vehicle bodyshop doing car body and alloy wheel repairs from a physical site in Cramlington, which is site-based work that implies employees, though the profile gives no headcount and no customer types.",
           "opener": "Your bodyshop in Cramlington carries out car body and alloy wheel repairs. Our accredited health and safety, first aid and manual handling training could help your team work safely on site."
+        },
+        "commercial_cleaning": {
+          "score": 60,
+          "band": "possible",
+          "reason": "The company runs its own bodyshop site in Cramlington offering car body and alloy wheel repairs, which matches the workshop premises the sales team targets, but the profile does not say whether customers visit the site or how many staff work there.",
+          "opener": "Your bodyshop in Cramlington handles car body repairs and alloy wheel repair from its own site. We provide commercial cleaning for workshops and offices used every day, so we could help keep your workspace and reception clean."
+        },
+        "web_marketing": {
+          "score": 80,
+          "band": "strong",
+          "reason": "The company is a local vehicle bodyshop offering car body and alloy wheel repairs to vehicle owners in Northumberland, a customer-facing trade that wins work locally, though its customer types and size are not stated.",
+          "opener": "Your bodyshop in Cramlington offers car body repairs and alloy wheel repair to vehicle owners across Northumberland. We design websites and run local search and social media marketing, which could help local drivers find your repair work online."
+        },
+        "bookkeeping": {
+          "score": 72,
+          "band": "possible",
+          "reason": "A vehicle bodyshop doing car body and alloy wheel repairs from a site in Cramlington is the kind of owner-managed trade business that would invoice regularly and need payroll, though headcount and customer mix are not stated.",
+          "opener": "Your bodyshop in Cramlington handles car body and alloy wheel repairs, which means regular invoicing across a busy workshop. We provide bookkeeping, payroll and year-end accounts for small limited companies like yours, so that paperwork can be handled in one place."
+        },
+        "workwear": {
+          "score": 72,
+          "band": "possible",
+          "reason": "A vehicle bodyshop doing car body and alloy wheel repairs from a Cramlington site is a premises-based trade whose technicians likely work on site, though the profile states no headcount and no uniform or customer-facing detail.",
+          "opener": "Your Cramlington bodyshop handles car body and alloy wheel repairs across Northumberland. Our branded workwear and PPE could keep your technicians looking professional and protected on the job."
+        },
+        "ev_charging": {
+          "score": 62,
+          "band": "possible",
+          "reason": "A vehicle bodyshop is a garage-type business with a physical site in Cramlington, which fits the ideal customer, but the profile does not mention a car park, yard, company vehicles or visitors, and the location is given as both Morpeth and Cramlington.",
+          "opener": "Your Cramlington site offers car body and alloy wheel repairs. We install electric vehicle charge points at business premises with car parks, and could support customers waiting on repairs."
         }
       }
     },
@@ -2866,6 +4391,36 @@
           "score": 25,
           "band": "weak",
           "reason": "The company is an IT consultancy with no site-based or physical work described, so it is a weak match for accredited health, safety and manual handling training despite selling to hospitality and retail clients.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "Task Force 42 is an IT consultancy that sells IT services to businesses, not a business with its own premises that staff or customers use daily, so it falls outside the commercial cleaning ideal customer.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 18,
+          "band": "not a fit",
+          "reason": "The company is a B2B IT contracting and consultancy firm that sells to UK businesses, which is the opposite of the local, customer-facing businesses this team targets.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 55,
+          "band": "possible",
+          "reason": "Task Force 42 is a Newcastle IT contracting and consultancy firm selling to UK businesses, which suggests staff and regular invoicing, but the profile gives no headcount, invoicing or ownership details and the sector is not one of the trades, manufacturers, agencies or retailers the sales team targets.",
+          "opener": "Task Force 42 has provided IT contracting and network security services to UK businesses since 2021. Our bookkeeping, payroll and year-end accounts service could take admin off your books so your team can focus on client work."
+        },
+        "workwear": {
+          "score": 25,
+          "band": "weak",
+          "reason": "The company is an IT consultancy and network services firm whose staff mostly work remotely or in offices, not on site or in customer-facing uniform, so it only partly matches the ideal customer, though it serves hospitality and retail clients.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "Task Force 42 is an IT support and consultancy firm with no vehicles, car park or yard mentioned, so it does not match the premises-based businesses the sales team targets.",
           "opener": null
         }
       }
@@ -2926,6 +4481,36 @@
           "band": "possible",
           "reason": "A boiler installation, repair and gas safety contractor with physical site-based work across the North East and Yorkshire and Humber, which implies field engineers, though the profile does not state headcount.",
           "opener": "Your team carries out boiler installations, repairs and gas safety inspections across the North East and Yorkshire and Humber, often at homes and rental properties. Our accredited manual handling and first aid training could help your field engineers work safely on site."
+        },
+        "commercial_cleaning": {
+          "score": 25,
+          "band": "weak",
+          "reason": "A boiler service and repair contractor that mainly sells to homeowners, landlords and property managers, with no premises that staff or customers use every day, so it is only a weak match for commercial cleaning.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 85,
+          "band": "strong",
+          "reason": "A local boiler service, repair and installation contractor in Tyne & Wear serving homeowners and landlords across the North East and Yorkshire and Humber, which matches the trades-type customer that wins work locally and would benefit from being found online.",
+          "opener": "Your team has served homes across the North East for over 40 years, and the recent expansion into Yorkshire and Humber suggests new local customers to win. Our website design and local search work helps trades businesses like yours get found by people searching for boiler help nearby."
+        },
+        "bookkeeping": {
+          "score": 78,
+          "band": "possible",
+          "reason": "A boiler installation, repair and servicing contractor serving homes, landlords and property firms in the North East and Yorkshire, which implies field engineers and regular invoicing, though headcount is not stated.",
+          "opener": "Your gas safety inspections and boiler installations across the North East and Yorkshire and Humber suggest a steady flow of invoices to landlords and property managers. Our bookkeeping, payroll and year-end accounts service is built for small trades firms like yours that need that side kept in order."
+        },
+        "workwear": {
+          "score": 88,
+          "band": "strong",
+          "reason": "A boiler service, repair and installation contractor with field engineers working at customers' premises across the North East and Yorkshire and Humber is a strong match for staff who work on site and need branded workwear and PPE.",
+          "opener": "Your team has been servicing, repairing and installing boilers across the North East for over 40 years, and expanding into Yorkshire and Humber. Our branded workwear and PPE are built for engineers who work on customer sites every day."
+        },
+        "ev_charging": {
+          "score": 35,
+          "band": "weak",
+          "reason": "The profile describes a boiler service and repair contractor serving mainly homeowners, landlords and housing associations in the North East, with only offices and property management firms as business premises, and no mention of a car park, yard or company vehicles for visitors or fleet use, so it is only a partial match to the ideal customer.",
+          "opener": null
         }
       }
     },
@@ -2983,6 +4568,36 @@
           "band": "possible",
           "reason": "The company installs radiators at customers' homes across the North East, which is physical site-based work that implies installers, but its customers are homeowners (B2C) and the profile does not state a team of employees.",
           "opener": "The Radiator Shed has supplied and installed radiators across the North East for over 20 years. Our accredited health, safety, first aid and manual handling training could help your installers work safely on customers' sites."
+        },
+        "commercial_cleaning": {
+          "score": 10,
+          "band": "not a fit",
+          "reason": "The company sells radiators and installation to homeowners (B2C) across the North East, which points away from our ideal customer of businesses with their own premises used daily by staff or customers.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 78,
+          "band": "possible",
+          "reason": "They are a Gateshead-based installer serving homeowners across the North East with a mobile home visit service, a customer-facing local trade that would benefit from online visibility, though the profile gives no website, search or social media detail and does not state staff numbers.",
+          "opener": "Your mobile survey service takes radiator advice straight to homeowners across the North East, and 20 years of installing them is a strong base to build on. We design websites and run local search and social media marketing that help trades like yours get found by homeowners nearby."
+        },
+        "bookkeeping": {
+          "score": 72,
+          "band": "possible",
+          "reason": "A Gateshead radiator supplier and installer with 20+ years trading and a mobile survey service suggests a trades business with employees and regular invoicing, but it sells B2C to homeowners rather than being owner-managed on the trade-invoicing model and no headcount is stated.",
+          "opener": "Your 20 years of radiator supply and installation across the North East suggests a steady flow of customer invoices and jobs to keep track of. Our bookkeeping, payroll and year-end accounts service is built for small trade firms like yours that need that handled properly."
+        },
+        "workwear": {
+          "score": 65,
+          "band": "possible",
+          "reason": "The company installs radiators and runs a mobile survey service that visits customers' homes, so its staff plausibly work on site, but it sells B2C to homeowners rather than to businesses, and its headcount is not stated.",
+          "opener": "Your team installs radiators and visits homes across the North East for surveys and advice. Our branded workwear and PPE could keep your fitters looking consistent and properly protected on every job."
+        },
+        "ev_charging": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "The company installs domestic radiators for homeowners on a mobile survey basis, with no business premises, car park, yard or company fleet mentioned, so it does not match the ideal customer of businesses with vehicles or visitors.",
+          "opener": null
         }
       }
     },
@@ -3046,6 +4661,36 @@
           "band": "possible",
           "reason": "TMS Grid is a UK high-voltage electrical contractor delivering installation, construction and O&M work on site, which implies a field workforce that suits manual handling and safety training, though the profile gives no headcount and its size figures are unfilled placeholders.",
           "opener": "TMS Grid's work on UK and Irish high-voltage connection projects, including civil, mechanical and electrical installation, involves a lot of physical site work. Our accredited health and safety and manual handling training could help your crews stay compliant and safe on those sites."
+        },
+        "commercial_cleaning": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "TMS Grid is a high-voltage electrical engineering contractor selling to energy and infrastructure developers, with no shared-premises, staff-use or customer-facing site that suits commercial cleaning, so it is a poor match for the ideal customer.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "TMS Grid is a B2B high-voltage electrical engineering contractor selling to energy and infrastructure developers, which falls outside the trades, salons, cafes, clinics and local shops the sales team targets.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 35,
+          "band": "weak",
+          "reason": "TMS Grid is an engineering and installation contractor with operations and maintenance work, so it likely has staff and invoices, but it is a large-scale high-voltage infrastructure provider serving energy developers rather than a small owner-managed trade or retailer, and its size signals are unfilled.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 82,
+          "band": "strong",
+          "reason": "The company is a high-voltage electrical contractor that delivers civil, mechanical and electrical installation and operations and maintenance across the UK and Ireland, so its staff clearly work on site and would need workwear and PPE.",
+          "opener": "TMS Grid delivers civil, mechanical and electrical installation and operations and maintenance on high-voltage projects across the UK and Ireland. Staff working on those sites need branded workwear, uniforms and PPE, and we supply all three."
+        },
+        "ev_charging": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "TMS Grid is a high-voltage grid connection contractor serving energy and infrastructure developers, with no garages, vehicle hire firms, hotels, retail sites or industrial units with their own car park or fleet, so it does not match the ideal customer for EV charge point installation.",
+          "opener": null
         }
       }
     },
@@ -3106,6 +4751,36 @@
           "band": "strong",
           "reason": "Usher Refrigeration is a commercial refrigeration engineer doing installation, maintenance and emergency repairs on site for food, retail and leisure businesses, which is physical field work that implies a team of engineers, matching the ideal customer.",
           "opener": "Your team has spent over 40 years installing, maintaining and repairing commercial refrigeration across the North East, much of it on customers' premises. We provide accredited health and safety, first aid and manual handling training that helps field engineers handle that physical work safely."
+        },
+        "commercial_cleaning": {
+          "score": 25,
+          "band": "weak",
+          "reason": "Usher Refrigeration Services Ltd is a commercial refrigeration engineering contractor, so it is a supplier-type business rather than a site that staff or customers use every day, though its work across food, retail and leisure clients overlaps with the target sectors.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 55,
+          "band": "possible",
+          "reason": "The company is a local North East commercial refrigeration engineer offering installation and emergency repairs, which suits local trade marketing, but its customers are food, retail and leisure businesses rather than consumer-facing customers.",
+          "opener": "Your commercial refrigeration work across the North East, from emergency repairs to coldroom installation, serves food, retail and leisure businesses. We design websites and run local search marketing, which could help local businesses find you when they need repairs."
+        },
+        "bookkeeping": {
+          "score": 80,
+          "band": "strong",
+          "reason": "Usher Refrigeration is an owner-style trades business doing installation, maintenance and emergency repairs for food, retail and leisure clients, which fits the trades profile the team targets, though headcount is not stated.",
+          "opener": "With over 40 years of commercial refrigeration installation and emergency repairs across the North East, your invoicing will likely be frequent and job-based. We provide bookkeeping, payroll and year-end accounts for small limited companies like yours, so you can keep that side running smoothly."
+        },
+        "workwear": {
+          "score": 88,
+          "band": "strong",
+          "reason": "The company is a commercial refrigeration engineer doing on-site installation, maintenance and emergency repairs for food, retail and leisure businesses, which matches the ideal customer of field engineers and maintenance firms whose staff work on site.",
+          "opener": "Your team handles emergency repairs and installations across the North East for food, retail and leisure businesses, so engineers are regularly on customers' sites. Our branded workwear, uniforms and PPE could help your engineers look professional and stay protected on every job."
+        },
+        "ev_charging": {
+          "score": 60,
+          "band": "possible",
+          "reason": "The profile shows an established (1984) refrigeration installation and repair firm serving North East businesses, which implies staff and vehicles, but it does not state a car park, yard, or company fleet, so the fit is plausible rather than clear.",
+          "opener": "Your emergency repair and installation work for food, retail and leisure businesses across the North East stands out. We install EV charge points at business premises, and sites with a yard or car park for staff and visiting vehicles are a good fit."
         }
       }
     },
@@ -3169,6 +4844,36 @@
           "band": "weak",
           "reason": "Westgate Laboratories is a small animal health testing lab selling postal worm egg count tests to horse owners and farmers, so its work is office and lab based rather than site-based or physical, and it has a small team with no clear sign of the employee-heavy construction, care or hospitality work the training suits, though a trainee lab technician vacancy hints at some staff.",
           "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "Westgate Laboratories is an animal health testing lab selling postal worm egg count tests to horse owners and farms, with no sign of its own cleaning-relevant premises used daily by staff or customers, so it is a poor match for commercial cleaning.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 22,
+          "band": "weak",
+          "reason": "Westgate Laboratories is a small family run animal health testing lab whose customers are horse owners, smallholders, yards and vets, which sits outside our customer-facing local trades, salons, cafes, clinics and shops, though it does sell to some local shops and merchants.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 62,
+          "band": "possible",
+          "reason": "Westgate Labs is a small family run lab with a purpose built facility and a trainee technician vacancy, so it probably has staff and regular invoicing from test sales and subscriptions, but the profile gives no headcount and it is a laboratory rather than the trades or retailers the team targets.",
+          "opener": "Your postal worm egg count service and subscription plans mean you invoice a steady stream of individual customers. We provide bookkeeping, payroll and year-end accounts for small owner-managed firms with regular invoicing, which may free up time as the business grows."
+        },
+        "workwear": {
+          "score": 15,
+          "band": "not a fit",
+          "reason": "Westgate Laboratories is an animal health testing lab selling postal worm egg counts to horse owners and farmers, with no sign of staff working on site or in uniform, so it is a poor match for branded workwear, uniforms and PPE.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "Westgate Laboratories is an animal health testing laboratory selling postal worm egg count tests to horse owners and farmers, with no sign of company vehicles, visitor car park or yard premises that would need charge points, so it falls outside the ideal customer profile.",
+          "opener": null
         }
       }
     },
@@ -3231,6 +4936,36 @@
           "band": "possible",
           "reason": "Windel Energy takes sites through planning and construction to energisation and has offices in Newcastle and Swansea, which suggests a team and some site work, but the profile is mainly development and office-based planning, with no direct evidence of its own installation crews.",
           "opener": "Windel Energy takes solar, wind and battery storage sites from origination through to energisation, with construction along the way. Our accredited health and safety, first aid and manual handling training could help staff working on those sites stay compliant as projects grow."
+        },
+        "commercial_cleaning": {
+          "score": 62,
+          "band": "possible",
+          "reason": "Windel Energy is a B2B renewable energy developer with offices in Newcastle Upon Tyne and Swansea, which suggests an office team, but the profile does not state headcount and the business is not a retail, hospitality or clinic premises.",
+          "opener": "Windel Energy has offices in Newcastle Upon Tyne and Swansea, with a 5GW renewable portfolio in development. We provide commercial cleaning for offices, so we could help keep both sites clean for your staff every day."
+        },
+        "web_marketing": {
+          "score": 8,
+          "band": "not a fit",
+          "reason": "Windel Energy is a B2B renewable energy developer selling to landowners and partners, not a customer-facing local business such as a trade, salon, cafe, clinic or independent shop, so it falls outside the ideal customer.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 40,
+          "band": "weak",
+          "reason": "Windel Energy is a Newcastle renewable energy developer with offices in two cities, a portfolio of over 5GW and a partnership to co-develop 1.4GW of solar, which points away from the small owner-managed firm with a few employees that the sales team targets, although the profile does not state headcount or ownership.",
+          "opener": null
+        },
+        "workwear": {
+          "score": 35,
+          "band": "weak",
+          "reason": "Windel Energy is a renewable energy developer with office-based work in Newcastle and Swansea and a focus on planning and land partnerships, with no mention of site-based staff or customer-facing uniformed roles, so it is only a partial match for workwear and PPE.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "Windel Energy is a renewable energy developer that sells development services to landowners and partners, not a business with its own car park, yard or company vehicles that would need charge points, so it is a poor match for the ideal customer.",
+          "opener": null
         }
       }
     },
@@ -3285,6 +5020,36 @@
           "score": 28,
           "band": "weak",
           "reason": "Zetland Group is a planning, safety and environmental consultancy serving energy developers, which is office-based advisory work rather than the site-based or physical work the training suits, and no headcount is stated.",
+          "opener": null
+        },
+        "commercial_cleaning": {
+          "score": 30,
+          "band": "weak",
+          "reason": "Zetland Group is a planning, safety and environmental consultancy serving energy developers, and the profile does not mention its own premises, team size or any on-site use, so it is only a partial match for an office cleaning customer.",
+          "opener": null
+        },
+        "web_marketing": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is a B2B planning and environmental consultancy selling to energy developers, which is not a customer-facing local business like the trades, salons, cafes, clinics or shops the sales team targets.",
+          "opener": null
+        },
+        "bookkeeping": {
+          "score": 55,
+          "band": "possible",
+          "reason": "Zetland Group is an independent UK consultancy based in Redcar that bills energy developers for planning, safety and environmental work, which suggests regular invoicing and staff, but the profile gives no size or ownership details to confirm an owner-managed firm.",
+          "opener": "Zetland Group helps energy developers through the regulatory consenting process from Redcar. We handle bookkeeping, payroll and year-end accounts for small limited companies that invoice regularly, which could take admin off your team."
+        },
+        "workwear": {
+          "score": 25,
+          "band": "weak",
+          "reason": "Zetland is a desk-based planning, safety and environmental consultancy serving energy developers with no sign of site work, customer-facing uniformed staff, or premises operations, so it is only a weak match for branded workwear, uniforms and PPE.",
+          "opener": null
+        },
+        "ev_charging": {
+          "score": 12,
+          "band": "not a fit",
+          "reason": "The company is a planning and environmental consultancy selling advice to energy developers, with no car park, yard, company vehicle fleet or premises-based operations mentioned, so it does not match the garages, hire firms, hotels, retail or industrial sites that are the best fit.",
           "opener": null
         }
       }
@@ -3344,160 +5109,7 @@
     "model": "claude-haiku-5-5",
     "enrich_per_1000_companies": 0.54,
     "score_per_1000_pairs": 0.28,
-    "project_total_usd": 0.22,
-    "project_total_calls": 695
-  },
-  "evaluation": {
-    "labelled": 24,
-    "description_key": "safety_training",
-    "website": {
-      "agree": 21,
-      "total": 24,
-      "pairs": {
-        "yes|yes": 21,
-        "yes|unsure": 3
-      }
-    },
-    "market": {
-      "agree": 15,
-      "total": 24,
-      "pairs": {
-        "both|both": 5,
-        "B2B|B2B": 10,
-        "B2B|both": 3,
-        "B2C|both": 1,
-        "both|B2C": 1,
-        "both|B2B": 1,
-        "B2B|B2C": 1,
-        "B2C|unclear": 1,
-        "B2B|unclear": 1
-      }
-    },
-    "fit": {
-      "exact": 6,
-      "within_one": 16,
-      "total": 21,
-      "pairs": {
-        "possible|weak": 2,
-        "strong|possible": 7,
-        "strong|strong": 4,
-        "possible|not a fit": 2,
-        "strong|not a fit": 3,
-        "possible|possible": 2,
-        "possible|strong": 1
-      },
-      "before_fix": {
-        "exact": 3,
-        "within_one": 8,
-        "total": 21
-      }
-    },
-    "fit_disagreements": [
-      {
-        "name": "Westgate Laboratories Ltd",
-        "human": "possible",
-        "llm": "weak",
-        "llm_score": 25,
-        "llm_reason": "Westgate Laboratories is a small animal health testing lab selling postal worm egg count tests to horse owners and farmers, so its work is office and lab based rather than site-based or physical, and it has a small team with no clear sign of the employee-heavy construction, care or hospitality work the training suits, though a trainee lab technician vacancy hints at some staff."
-      },
-      {
-        "name": "Devin Consulting Ltd",
-        "human": "strong",
-        "llm": "possible",
-        "llm_score": 62,
-        "llm_reason": "The company is an engineering consultancy with installation quality control, pool tanks and movable structures, and engineers needing two years of training, which implies site-based technical work and staff, but the profile does not state headcount and the core service is design consultancy rather than hands-on site work."
-      },
-      {
-        "name": "Sabre Material Handling Ltd",
-        "human": "strong",
-        "llm": "possible",
-        "llm_score": 78,
-        "llm_reason": "Sabre Material Handling is a Durham-based forklift sales, hire and repair business with physical site-based work such as repairs, servicing and LOLER inspections, which implies a workforce, though headcount is not stated."
-      },
-      {
-        "name": "Pyralink Innovation Ltd",
-        "human": "possible",
-        "llm": "not a fit",
-        "llm_score": 8,
-        "llm_reason": "Pyralink is an office-based cybersecurity and AI assurance consultancy selling to technology firms, with no site-based or physical work and no staff numbers stated, so it falls outside the ideal health and safety training customer."
-      },
-      {
-        "name": "Ark Signs Ltd",
-        "human": "strong",
-        "llm": "possible",
-        "llm_score": 60,
-        "llm_reason": "The company makes site boards, hoardings and vehicle graphics for businesses in the North East, which suggests some on-site work, but the profile does not state headcount or whether it employs a team."
-      },
-      {
-        "name": "Serios Group Ltd",
-        "human": "strong",
-        "llm": "not a fit",
-        "llm_score": 15,
-        "llm_reason": "Seriös Group is a data solutions consultancy selling software and consulting, with no site-based or physical work, and the profile shows no evidence of a sizeable employee base in the kind of work the training suits, so the fit is weak."
-      },
-      {
-        "name": "City Wheels Ltd",
-        "human": "possible",
-        "llm": "weak",
-        "llm_score": 22,
-        "llm_reason": "A private hire taxi and chauffeur business whose work is booking-led driving rather than site-based or physical work, so it is a weak match for accredited health, safety, first aid and manual handling training, though it may employ drivers."
-      },
-      {
-        "name": "Avor (Holdings) Ltd",
-        "human": "strong",
-        "llm": "possible",
-        "llm_score": 62,
-        "llm_reason": "The company runs two branches in Blyth and Bedlington offering MOT testing, servicing and tyre fitting through garages, which are physical workshop jobs that imply a staff team, though headcount is not stated and the core business is vehicle hire."
-      },
-      {
-        "name": "One I.T. Support Ltd",
-        "human": "strong",
-        "llm": "not a fit",
-        "llm_score": 12,
-        "llm_reason": "The company is a managed IT support provider with office-based services and no site-based or physical work, so it does not match the health and safety, first aid and manual handling training customer profile despite having a team."
-      },
-      {
-        "name": "Nelson Bridges Ltd",
-        "human": "possible",
-        "llm": "not a fit",
-        "llm_score": 12,
-        "llm_reason": "Nelson Bridges is a legal recruitment consultancy placing solicitors and conveyancers with law firms, an office-based business with no site-based or physical work, so it is not a sensible prospect for accredited health and safety, first aid and manual handling training."
-      },
-      {
-        "name": "Oms Automotive Ltd",
-        "human": "strong",
-        "llm": "not a fit",
-        "llm_score": 15,
-        "llm_reason": "The company is an online retailer of vehicle parts selling B2C to vehicle owners, with no site-based or physical work and no sign of a team of employees in the profile, so it is a weak match for accredited health and safety, first aid and manual handling training."
-      },
-      {
-        "name": "Polyphotonix Ltd",
-        "human": "strong",
-        "llm": "possible",
-        "llm_score": 65,
-        "llm_reason": "The company manufactures photonic medical devices at a Sedgefield base, which implies physical production work and staff, but the profile states no headcount and does not describe its workforce or site safety arrangements."
-      },
-      {
-        "name": "Hartlepool Plumbing Supplies Ltd",
-        "human": "strong",
-        "llm": "possible",
-        "llm_score": 60,
-        "llm_reason": "The profile shows a plumbing merchant with a Hartlepool showroom, local collection and a range of pipe, radiator and tool stock, which implies staff handling physical goods, but it does not state a workforce size and sells mainly to trade and retail customers rather than doing site-based work itself."
-      },
-      {
-        "name": "Windel Energy Ltd",
-        "human": "strong",
-        "llm": "possible",
-        "llm_score": 55,
-        "llm_reason": "Windel Energy takes sites through planning and construction to energisation and has offices in Newcastle and Swansea, which suggests a team and some site work, but the profile is mainly development and office-based planning, with no direct evidence of its own installation crews."
-      },
-      {
-        "name": "Emperor Roofing NE Ltd",
-        "human": "possible",
-        "llm": "strong",
-        "llm_score": 85,
-        "llm_reason": "Emperor Roofing NE is a roofing contractor doing physical site work with £10m employers' liability insurance and a described family-run team, which strongly matches the construction-sector ideal customer."
-      }
-    ]
+    "project_total_usd": 0.29,
+    "project_total_calls": 970
   }
 }

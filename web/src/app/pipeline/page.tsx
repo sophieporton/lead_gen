@@ -17,12 +17,12 @@ export default function PipelinePage() {
     <>
       <PageTitle
         title="Pipeline and data quality"
-        intro="How the leads are distributed across the five example customers, what cleaning did to a messy CRM export, and what the LLM calls cost."
+        intro={`How the leads are distributed across the ${data.descriptions.length} example searches, what cleaning did to a messy CRM export, and what the LLM calls cost.`}
       />
 
       <Section
         title="How well the leads fit each kind of customer"
-        intro={`The same ${leads.length} leads (property companies excluded), scored against five different customer descriptions. Hover a segment for its count; the table below has every number.`}
+        intro={`The same ${leads.length} leads (property companies excluded), scored against ${data.descriptions.length} different customer descriptions. Hover a segment for its count; the table below has every number.`}
       >
         <Card>
           <div className="mb-4">

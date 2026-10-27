@@ -6,14 +6,13 @@ import { SITE } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Lead Research Pipeline",
   description:
-    "A working demo: small companies in the North East of England found, checked against their websites and scored as sales leads by an AI pipeline.",
+    "Tell it what you sell and get a list of small companies likely to buy it: an AI pipeline that finds companies, reads their websites and scores each one as a lead.",
 };
 
 const NAV = [
-  { href: "/", label: "Overview" },
-  { href: "/leads", label: "Leads" },
-  { href: "/pipeline", label: "Pipeline and data quality" },
-  { href: "/evaluation", label: "How accurate is it?" },
+  { href: "/", label: "Try the demo" },
+  { href: "/how-it-works", label: "How it works" },
+  { href: "/pipeline", label: "Data quality" },
 ];
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

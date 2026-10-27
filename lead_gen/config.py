@@ -181,8 +181,8 @@ LLM_PAGE_CHARS = 6_000
 SCORE_PROMPT_VERSION = "score-v3"
 
 # Example customer descriptions ("who is selling, and to whom") that every
-# lead is scored against. The deployed dashboard shows these pre-computed
-# scores, so it never makes live LLM calls.
+# lead is scored against. The web demo offers these as its searchable presets,
+# using pre-computed scores, so it never makes live LLM calls.
 CUSTOMER_DESCRIPTIONS = {
     "it_support": (
         "We provide managed IT support, cybersecurity and Microsoft 365 setup for small businesses "
@@ -209,6 +209,31 @@ CUSTOMER_DESCRIPTIONS = {
         "We deliver accredited health and safety, first aid and manual handling training to employers. "
         "Best fit: firms with site-based or physical work and a team of employees, such as construction, "
         "engineering, industrial maintenance, care and hospitality."
+    ),
+    "commercial_cleaning": (
+        "We provide commercial cleaning for offices, shops, clinics and hospitality venues. Best fit: "
+        "businesses with their own premises that staff or customers use every day, such as cafes, pubs, "
+        "clinics, opticians, gyms, workshops and offices with a team."
+    ),
+    "web_marketing": (
+        "We design websites and run local search and social media marketing for small businesses. "
+        "Best fit: customer-facing businesses that win work locally and would gain from being found "
+        "online, such as trades, salons, cafes, clinics and independent shops."
+    ),
+    "bookkeeping": (
+        "We provide bookkeeping, payroll and year-end accounts for small limited companies. Best fit: "
+        "owner-managed firms with a few employees and regular invoicing, such as trades, small "
+        "manufacturers, agencies and independent retailers. Not accountancy firms themselves."
+    ),
+    "workwear": (
+        "We supply branded workwear, uniforms and PPE. Best fit: businesses whose staff work on site "
+        "or face customers in uniform, such as builders, engineers, maintenance firms, cleaners, "
+        "hospitality and care providers."
+    ),
+    "ev_charging": (
+        "We install electric vehicle charge points at business premises. Best fit: businesses with "
+        "their own car park or yard and company vehicles or visitors, such as garages, vehicle hire "
+        "firms, hotels, retail sites and industrial units."
     ),
 }
 
