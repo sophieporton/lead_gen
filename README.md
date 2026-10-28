@@ -1,36 +1,64 @@
-# Lead Gen: AI lead research pipeline
+# Lead Gen: AI lead research
 
-A pipeline that finds small businesses in the North East of England, uses an LLM to work out what they do and how well they fit a target customer, cleans the results against a CRM export, and shows everything in a dashboard.
+**Tell it what you sell. Get a list of local companies likely to buy it.**
 
-**Status:** work in progress (Week 3 of 4). The dashboard is still to come.
+**[Try the demo](https://lead-gen-orpin.vercel.app/)** (no sign-up, nothing to install)
 
-## What it does
+For each company you get:
 
+- what they do, in one sentence
+- a fit score from 0 to 100, with the reason
+- a draft opening line for a cold email
+- whether they're already in your CRM
+
+## An example
+
+Searching for customers for **EV charge points**, the top lead was a vehicle hire firm:
+
+> **Score: 92.** A vehicle hire firm with two branches, running a fleet of cars and vans and offering MOT and servicing.
+>
+> **Opener:** "Your Blyth and Bedlington branches run a self-drive car and van fleet alongside MOT and servicing work, so vehicles are moving through your sites every day."
+
+## How it works
+
+```mermaid
+flowchart LR
+    A[Find companies] --> B[Find their websites]
+    B --> C[Read the websites]
+    C --> D[AI profiles and scores each one]
+    D --> E[Check against your CRM]
 ```
-Companies House  ->  find websites  ->  scrape  ->  LLM enrichment  ->  evaluate  ->  CRM clean  ->  dashboard
-(bulk data + API)    (Serper search)    (httpx)     (structured output)  (hand labels)  (dedupe)      (Next.js)
-```
 
-1. **Find companies.** Active companies with a registered office in the NE, SR, DH, TS or DL postcode areas that file small company accounts.
-2. **Find websites.** Companies House does not store websites, so each company is searched by name and town and the results are checked against the company number and postcode.
-3. **Scrape.** The homepage and about page of each matched website, respecting robots.txt.
-4. **Enrich.** Claude Haiku 5.5 reads each site and returns a profile validated with Pydantic: what they sell, who to, B2B or B2C, size and growth signals, and whether the site really is theirs. It then scores each lead against example customer descriptions and drafts a short outreach opener. Every call is cached and costed.
-5. **Evaluate.** Hand labels for 25 companies, compared with the LLM's answers, with every disagreement listed in [eval/results.md](eval/results.md).
-6. **Clean for the CRM.** A synthetic, deliberately messy CRM export is cleaned, de-duplicated and matched against the new leads, and the new ones are exported as a HubSpot-ready CSV.
-7. **Dashboard.** A static Next.js site in [web/](web/) that reads a company-level snapshot of the results. It makes no live LLM calls, so it costs nothing to run.
+1. **Find companies** from Companies House, the official UK register. This demo covers small companies in the North East of England.
+2. **Find their websites** with a web search, and check each site really belongs to the company.
+3. **Read each website**: the homepage and about page.
+4. **Profile and score each company** with an AI model (Claude), against a plain-English description of your ideal customer.
+5. **Check against your CRM**, so you only get companies you don't already have. New leads are exported as a file ready to import into HubSpot.
 
-## Data and GDPR
+## What the demo run found
 
-This project uses company-level public data only:
+- Of 200 small companies sampled, **55 had a website** that was verifiably theirs. Most small companies don't have one.
+- **35 were new leads**; the other 20 were already in the (synthetic) CRM.
+- The AI caught wrong website matches that simple rules missed, such as a US company with a similar name.
+- AI costs are about **$0.54 per 1,000 companies** profiled.
 
-- Companies House records, which are published for public use.
-- The public homepage and about page of each company's own website.
+## Data and privacy
 
-It does not collect names, emails or phone numbers of individuals (email addresses and phone numbers are stripped from scraped text before it is stored), and it does not scrape LinkedIn or other social networks. Keeping to company-level data means the pipeline does not process personal data about individuals in the first place, which is the simplest way to stay within UK GDPR. The CRM data used for matching is synthetic.
+- **Company-level public data only:** Companies House records and each company's own public website.
+- **No personal data:** no names, emails or phone numbers of individuals, and no LinkedIn. Emails and phone numbers are removed from website text before it is stored. This keeps it simple under UK GDPR.
+- **Polite scraping:** it respects robots.txt, waits between requests and identifies itself.
+- **Synthetic CRM:** the CRM data used for matching is made up.
 
-Scraping is polite: the pipeline checks robots.txt, waits between requests to the same site and identifies itself with a clear user agent.
+---
 
-## How to run
+## For developers
+
+Built with Python, httpx, BeautifulSoup, DuckDB, Pydantic, Claude Haiku 5.5 and Next.js.
+
+<details>
+<summary><b>Run it yourself</b></summary>
+
+You need a Companies House API key, a Serper.dev key (web search) and an Anthropic API key.
 
 ```bash
 conda create -n leadgen python=3.12
@@ -39,28 +67,47 @@ pip install -r requirements.txt
 cp .env.example .env   # then add your API keys
 ```
 
-Each stage can be run on its own and can be re-run safely:
+Each stage runs on its own and can be re-run safely; it only processes companies that don't have a result yet.
 
 ```bash
-python -m lead_gen.db              # create the database
-python -m lead_gen.find_companies  # stage 1
-python -m lead_gen.find_websites   # stage 2
-python -m lead_gen.scrape          # stage 3
-python -m lead_gen.enrich          # stage 4a (needs ANTHROPIC_API_KEY)
-python -m lead_gen.score           # stage 4b
-python -m lead_gen.evaluate sheet  # stage 5: create the labelling sheet
-python -m lead_gen.synthetic_crm   # stage 6a: generate the synthetic CRM export
-python -m lead_gen.crm_clean       # stage 6b: clean, de-duplicate and match
-python -m lead_gen.hubspot_export  # stage 6c: HubSpot-ready CSV of new leads
-python -m lead_gen.export_dashboard  # data snapshot for the web dashboard (see web/README.md)
+python -m lead_gen.db                # create the database
+python -m lead_gen.find_companies    # 1. find companies
+python -m lead_gen.find_websites     # 2. find websites
+python -m lead_gen.scrape            # 3. read the websites
+python -m lead_gen.enrich            # 4a. AI profile
+python -m lead_gen.score             # 4b. AI fit score and opener
+python -m lead_gen.synthetic_crm     # 5a. generate the synthetic CRM export
+python -m lead_gen.crm_clean         # 5b. clean, de-duplicate and match
+python -m lead_gen.hubspot_export    # 5c. HubSpot-ready CSV of new leads
+python -m lead_gen.export_dashboard  # data snapshot for the web demo
 ```
 
-## Results
+To run the web demo locally, see [web/README.md](web/README.md).
 
-Full results so far are in [docs/findings.md](docs/findings.md). In short:
+</details>
 
-- Of 200 sampled companies, 55 (27.5%) have a website the pipeline and the LLM agree is theirs. Property companies almost never do (1 of 33).
-- LLM enrichment and scoring cost about $0.54 per 1,000 companies, plus $0.28 per 1,000 fit scores, with Claude Haiku 5.5. The whole project so far has cost $0.22 in LLM calls.
-- The LLM caught wrong website matches the rules missed, such as a US company with a similar name.
-- Against hand labels, the LLM's website check agreed 88% of the time. Fit scoring started at 14% exact agreement because the prompt penalised websites that don't state headcount; after fixing that, 76% of scores were within one band of the human label (likely optimistic, as the fix was tuned on the same labels).
-- CRM matching found 56 of 60 duplicate pairs and all 20 existing leads, with no false merges.
+<details>
+<summary><b>How the AI is used</b></summary>
+
+- The model never browses or searches. It only reads text the pipeline has already collected.
+- Every answer must match a fixed Pydantic schema before it is stored.
+- It is told to use only what the website says, and to leave a field empty rather than guess.
+- Scoring reads the short profile, not the whole website, which keeps it cheap.
+- Every call is cached and logged with its token count and cost, and prompts are versioned.
+- Answers were checked against 25 hand-labelled companies: see [eval/results.md](eval/results.md).
+
+</details>
+
+<details>
+<summary><b>Repository layout</b></summary>
+
+```
+lead_gen/          one Python module per pipeline stage, plus config, db and shared helpers
+web/               the Next.js demo site
+eval/              labelling sheet and evaluation reports
+docs/findings.md   notes and numbers from every stage
+```
+
+The customer descriptions used for scoring are in `CUSTOMER_DESCRIPTIONS` in [lead_gen/config.py](lead_gen/config.py).
+
+</details>
